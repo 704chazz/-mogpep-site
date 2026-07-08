@@ -222,17 +222,19 @@ footer{background:var(--white);border-top:1px solid var(--border-soft);padding:2
 
 /* ── CART ICON BUTTON ── */
 .cart-btn{
-  display:flex;position:fixed;top:3.2rem;right:12rem;z-index:200;
-  background:none;border:none;cursor:pointer;
-  align-items:center;gap:0.5rem;padding:0.4rem 0.7rem;
+  display:flex;position:relative;z-index:10;
+  background:none;border:none;cursor:pointer;color:var(--ink);
+  align-items:center;padding:0.4rem;
 }
-.cart-btn.visible{display:flex}
+.cart-btn svg{display:block}
 .cart-icon{font-size:1.2rem;color:var(--ink)}
 .cart-count{
+  position:absolute;top:-2px;right:-2px;
   background:var(--gold);color:var(--white);
-  width:18px;height:18px;border-radius:50%;
+  width:16px;height:16px;border-radius:50%;
   display:flex;align-items:center;justify-content:center;
   font-family:var(--ff-mono);font-size:0.5rem;font-weight:500;
+  line-height:1;
 }
 
 /* ── CART DRAWER ── */
@@ -404,8 +406,6 @@ footer{background:var(--white);border-top:1px solid var(--border-soft);padding:2
   nav{padding:1rem 1.25rem}
   .nav-links{display:none}
   .nav-cta{display:none}
-  .cart-btn{right:4rem !important}
-
   /* Shipping banner — single line scroll */
   .shipping-banner{
     gap:1rem;padding:0.5rem 1rem;
@@ -1232,7 +1232,17 @@ footer{background:var(--white);border-top:1px solid var(--border-soft);padding:2
     <li><a href="#contact">Contact</a></li>
     <li><a href="#" onclick="openFAQ();return false">FAQ</a></li>
   </ul>
-  <a href="#products" class="nav-cta">Shop Now</a>
+  <div style="display:flex;align-items:center;gap:1.25rem">
+    <button class="cart-btn" id="cartBtn" onclick="openCart()" aria-label="Open cart">
+      <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 1h3l2 9h10l2-7H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <circle cx="9" cy="17" r="1.5" fill="currentColor"/>
+        <circle cx="17" cy="17" r="1.5" fill="currentColor"/>
+      </svg>
+      <span class="cart-count" id="cartCount" style="display:none">0</span>
+    </button>
+    <a href="#products" class="nav-cta">Shop Now</a>
+  </div>
   <button class="nav-hamburger" id="navHamburger" onclick="toggleMobileMenu()" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
@@ -1363,7 +1373,7 @@ footer{background:var(--white);border-top:1px solid var(--border-soft);padding:2
         <div class="stock-badge stock-low"><span class="stock-dot"></span>Low Stock — 11 remaining</div>
         <div class="pcard-footer">
           <span class="pcard-price">$89</span>
-          <button class="pcard-btn" onclick="addToCart('bpc157')" data-item-id="bpc157">Add to Cart</button>
+          <button class="pcard-btn" onclick="event.stopPropagation();addToCart('bpc157')" data-item-id="bpc157">Add to Cart</button>
         </div>
       </div>
     </div>
@@ -1386,7 +1396,7 @@ footer{background:var(--white);border-top:1px solid var(--border-soft);padding:2
         <div class="stock-badge stock-in"><span class="stock-dot"></span>In Stock — 38 units</div>
         <div class="pcard-footer">
           <span class="pcard-price">$109</span>
-          <button class="pcard-btn" onclick="addToCart('tb500')" data-item-id="tb500">Add to Cart</button>
+          <button class="pcard-btn" onclick="event.stopPropagation();addToCart('tb500')" data-item-id="tb500">Add to Cart</button>
         </div>
       </div>
     </div>
@@ -1408,7 +1418,7 @@ footer{background:var(--white);border-top:1px solid var(--border-soft);padding:2
         <div class="stock-badge stock-low"><span class="stock-dot"></span>Low Stock — 8 remaining</div>
         <div class="pcard-footer">
           <span class="pcard-price">$75</span>
-          <button class="pcard-btn" onclick="addToCart('ghkcu')" data-item-id="ghkcu">Add to Cart</button>
+          <button class="pcard-btn" onclick="event.stopPropagation();addToCart('ghkcu')" data-item-id="ghkcu">Add to Cart</button>
         </div>
       </div>
     </div>
@@ -1430,7 +1440,7 @@ footer{background:var(--white);border-top:1px solid var(--border-soft);padding:2
         <div class="stock-badge stock-in"><span class="stock-dot"></span>In Stock — 24 units</div>
         <div class="pcard-footer">
           <span class="pcard-price">$95</span>
-          <button class="pcard-btn" onclick="addToCart('gt1500')" data-item-id="gt1500">Add to Cart</button>
+          <button class="pcard-btn" onclick="event.stopPropagation();addToCart('gt1500')" data-item-id="gt1500">Add to Cart</button>
         </div>
       </div>
     </div>
@@ -1455,7 +1465,7 @@ footer{background:var(--white);border-top:1px solid var(--border-soft);padding:2
         <div class="stock-badge stock-in"><span class="stock-dot"></span>In Stock — 19 units</div>
         <div class="pcard-footer">
           <span class="pcard-price">$89</span>
-          <button class="pcard-btn" onclick="addToCart('cjc1295')" data-item-id="cjc1295">Add to Cart</button>
+          <button class="pcard-btn" onclick="event.stopPropagation();addToCart('cjc1295')" data-item-id="cjc1295">Add to Cart</button>
         </div>
       </div>
     </div>
@@ -1478,7 +1488,7 @@ footer{background:var(--white);border-top:1px solid var(--border-soft);padding:2
         <div class="stock-badge stock-in"><span class="stock-dot"></span>In Stock — 22 units</div>
         <div class="pcard-footer">
           <span class="pcard-price">$99</span>
-          <button class="pcard-btn" onclick="addToCart('ipamorelin')" data-item-id="ipamorelin">Add to Cart</button>
+          <button class="pcard-btn" onclick="event.stopPropagation();addToCart('ipamorelin')" data-item-id="ipamorelin">Add to Cart</button>
         </div>
       </div>
     </div>
@@ -1501,7 +1511,7 @@ footer{background:var(--white);border-top:1px solid var(--border-soft);padding:2
         <div class="stock-badge stock-low"><span class="stock-dot"></span>Low Stock — 5 remaining</div>
         <div class="pcard-footer">
           <span class="pcard-price">$129</span>
-          <button class="pcard-btn" onclick="addToCart('retatrutide')" data-item-id="retatrutide">Add to Cart</button>
+          <button class="pcard-btn" onclick="event.stopPropagation();addToCart('retatrutide')" data-item-id="retatrutide">Add to Cart</button>
         </div>
       </div>
     </div>
@@ -1524,7 +1534,7 @@ footer{background:var(--white);border-top:1px solid var(--border-soft);padding:2
         </div>
         <div class="pcard-footer">
           <span class="pcard-price">$159</span>
-          <button class="pcard-btn" onclick="addToCart('bb10')" data-item-id="bb10">Add to Cart</button>
+          <button class="pcard-btn" onclick="event.stopPropagation();addToCart('bb10')" data-item-id="bb10">Add to Cart</button>
         </div>
       </div>
     </div>
@@ -1547,7 +1557,7 @@ footer{background:var(--white);border-top:1px solid var(--border-soft);padding:2
         </div>
         <div class="pcard-footer">
           <span class="pcard-price">$79</span>
-          <button class="pcard-btn" onclick="addToCart('mt2')" data-item-id="mt2">Add to Cart</button>
+          <button class="pcard-btn" onclick="event.stopPropagation();addToCart('mt2')" data-item-id="mt2">Add to Cart</button>
         </div>
       </div>
     </div>
@@ -1570,7 +1580,7 @@ footer{background:var(--white);border-top:1px solid var(--border-soft);padding:2
         </div>
         <div class="pcard-footer">
           <span class="pcard-price">$219</span>
-          <button class="pcard-btn" onclick="addToCart('klow80')" data-item-id="klow80">Add to Cart</button>
+          <button class="pcard-btn" onclick="event.stopPropagation();addToCart('klow80')" data-item-id="klow80">Add to Cart</button>
         </div>
       </div>
     </div>
@@ -1661,16 +1671,6 @@ footer{background:var(--white);border-top:1px solid var(--border-soft);padding:2
   </ul>
   <p class="f-copy">© 2026 Mogpep Research Solutions. All rights reserved.</p>
 </footer>
-
-<!-- CART ICON (fixed in nav area) -->
-<button class="cart-btn" id="cartBtn" onclick="openCart()" aria-label="Open cart">
-  <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M1 1h3l2 9h10l2-7H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-    <circle cx="9" cy="17" r="1.5" fill="currentColor"/>
-    <circle cx="17" cy="17" r="1.5" fill="currentColor"/>
-  </svg>
-  <span class="cart-count" id="cartCount" style="display:none">0</span>
-</button>
 
 <!-- CART OVERLAY -->
 <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
@@ -2083,7 +2083,7 @@ function openProduct(id) {
         <h3 class="pcard-name">${r.name}</h3>
         <div class="pcard-footer" style="margin-top:0.75rem;padding-top:0.75rem;border-top:1px solid var(--border-soft);display:flex;justify-content:space-between;align-items:center">
           <span class="pcard-price">$${r.price}</span>
-          <button class="pcard-btn" onclick="addToCart('${r.id}')">Add</button>
+          <button class="pcard-btn" onclick="event.stopPropagation();addToCart('${r.id}')">Add</button>
         </div>
       </div>
     </div>`).join('');
