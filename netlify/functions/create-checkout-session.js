@@ -12,16 +12,19 @@ const SITE_URL = process.env.SITE_URL || 'https://mogpep.com';
 // Source of truth for prices/names. Keep this in sync with the
 // product data in index.html. Prices are in cents.
 const PRODUCTS = {
-  bpc157:      { name: 'BPC-157',      price: 8900  },
-  tb500:       { name: 'TB-500',       price: 10900 },
-  ghkcu:       { name: 'GHK-CU',       price: 7500  },
-  gt1500:      { name: 'GT1500',       price: 9500  },
-  cjc1295:     { name: 'CJC-1295',     price: 8900  },
-  ipamorelin:  { name: 'Ipamorelin',   price: 9900  },
-  retatrutide: { name: 'Retatrutide',  price: 12900 },
-  bb10:        { name: 'BB10',         price: 15900 },
-  mt2:         { name: 'MT2',          price: 7900  },
-  klow80:      { name: 'KLOW80',       price: 21900 },
+  bpc157:      { name: 'BPC-157',      price: 5999  },
+  tb500:       { name: 'TB-500',       price: 5999  },
+  ghkcu:       { name: 'GHK-CU',       price: 8999  },
+  gt1500:      { name: 'GT1500',       price: 7999  },
+  cjc1295:     { name: 'CJC-1295',     price: 8999  },
+  ipamorelin:  { name: 'Ipamorelin',   price: 8999  },
+  retatrutide: { name: 'Retatrutide',  price: 11999 },
+  bb10:        { name: 'BB10',         price: 10999 },
+  mt2:         { name: 'MT2',          price: 5999  },
+  klow80:      { name: 'KLOW80',       price: 15999 },
+  motsc:       { name: 'MOTS-c',       price: 5999  },
+  tesamorelin: { name: 'Tesamorelin',  price: 8999  },
+  semax:       { name: 'Semax',        price: 7999  },
 };
 
 exports.handler = async (event) => {
