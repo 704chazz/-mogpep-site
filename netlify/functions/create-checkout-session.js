@@ -51,12 +51,14 @@ exports.handler = async (event) => {
   }
 
   const line_items = [];
+  let totalQty = 0;
   for (const item of cart) {
     const product = PRODUCTS[item.id];
     if (!product) {
       return { statusCode: 400, body: JSON.stringify({ error: `Unknown product: ${item.id}` }) };
     }
     const quantity = Math.max(1, Math.min(99, parseInt(item.quantity, 10) || 1));
+    totalQty += quantity;
     line_items.push({
       price_data: {
         currency: 'aud',
@@ -67,6 +69,21 @@ exports.handler = async (event) => {
     });
   }
 
+  // Site policy: 2+ vials ships free express; a single vial pays a flat
+  // express fee. We only offer express shipping — no standard option.
+  const isFreeShipping = totalQty >= 2;
+  const shipping_options = [{
+    shipping_rate_data: {
+      type: 'fixed_amount',
+      fixed_amount: { amount: isFreeShipping ? 0 : 1500, currency: 'aud' },
+      display_name: isFreeShipping ? 'Free Express Shipping' : 'Express Shipping',
+      delivery_estimate: {
+        minimum: { unit: 'business_day', value: 1 },
+        maximum: { unit: 'business_day', value: 3 },
+      },
+    },
+  }];
+
   try {
     const session = await stripe.checkout.sessions.create({
       mode: 'payment',
@@ -74,6 +91,7 @@ exports.handler = async (event) => {
       success_url: `${SITE_URL}/?checkout=success`,
       cancel_url: `${SITE_URL}/?checkout=cancelled`,
       shipping_address_collection: { allowed_countries: ['AU'] },
+      shipping_options,
     });
 
     return {
