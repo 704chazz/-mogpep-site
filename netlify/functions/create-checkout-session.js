@@ -92,6 +92,7 @@ exports.handler = async (event) => {
       cancel_url: `${SITE_URL}/?checkout=cancelled`,
       shipping_address_collection: { allowed_countries: ['AU'] },
       shipping_options,
+      allow_promotion_codes: true,
     });
 
     return {
