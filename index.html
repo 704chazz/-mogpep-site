@@ -1436,6 +1436,7 @@ footer{background:var(--white);border-top:1px solid var(--border-soft);padding:2
       "name": "MOTS-c",
       "description": "MOTS-c is a 16-amino-acid mitochondrial-derived peptide studied for its role in metabolic homeostasis and mitochondrial signalling in preclinical research.",
       "sku": "motsc",
+      "image": "https://mogpep.com/images/motsc.jpg",
       "brand": {
         "@type": "Brand",
         "name": "Mogpep"
@@ -1476,6 +1477,7 @@ footer{background:var(--white);border-top:1px solid var(--border-soft);padding:2
       "name": "Semax",
       "description": "Semax is a synthetic nootropic heptapeptide derived from ACTH(4-10), studied for BDNF modulation and neuroprotective research.",
       "sku": "semax",
+      "image": "https://mogpep.com/images/semax.jpg",
       "brand": {
         "@type": "Brand",
         "name": "Mogpep"
@@ -1883,10 +1885,7 @@ footer{background:var(--white);border-top:1px solid var(--border-soft);padding:2
     </div>
 
     <div class="pcard" onclick="openProduct('motsc')" style="cursor:pointer">
-      <div class="pcard-img" style="background:var(--cream2);aspect-ratio:2/3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.5rem">
-        <div style="width:44px;height:44px;border-radius:50%;background:var(--border);opacity:0.4"></div>
-        <span style="font-family:var(--ff-mono);font-size:0.5rem;letter-spacing:0.12em;color:var(--text-faint);text-transform:uppercase">Photo Coming Soon</span>
-      </div>
+      <div class="pcard-img"><img src="images/motsc.jpg" alt="MOTS-c" style="width:100%;height:100%;object-fit:cover;object-position:center 8%;display:block;transition:transform 0.55s ease"></div>
       <div class="pcard-accent acc-copper"></div>
       <div class="pcard-body">
         <p class="pcard-seq">11 — MP-2405-MOTSC</p>
@@ -1933,10 +1932,7 @@ footer{background:var(--white);border-top:1px solid var(--border-soft);padding:2
     </div>
 
     <div class="pcard" onclick="openProduct('semax')" style="cursor:pointer">
-      <div class="pcard-img" style="background:var(--cream2);aspect-ratio:2/3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.5rem">
-        <div style="width:44px;height:44px;border-radius:50%;background:var(--border);opacity:0.4"></div>
-        <span style="font-family:var(--ff-mono);font-size:0.5rem;letter-spacing:0.12em;color:var(--text-faint);text-transform:uppercase">Photo Coming Soon</span>
-      </div>
+      <div class="pcard-img"><img src="images/semax.jpg" alt="Semax" style="width:100%;height:100%;object-fit:cover;object-position:center 8%;display:block;transition:transform 0.55s ease"></div>
       <div class="pcard-accent acc-purple"></div>
       <div class="pcard-body">
         <p class="pcard-seq">13 — MP-2405-SEMAX</p>
@@ -2095,9 +2091,9 @@ const CATALOG = {
   bb10:        { name: 'BB10',        price: 109.99, image: 'images/bb10.jpg' },
   mt2:         { name: 'MT2',         price: 59.99,  image: 'images/mt2.jpg' },
   klow80:      { name: 'KLOW80',      price: 159.99, image: 'images/klow80.jpg' },
-  motsc:       { name: 'MOTS-c',      price: 59.99,  image: '' },
+  motsc:       { name: 'MOTS-c',      price: 59.99,  image: 'images/motsc.jpg' },
   tesamorelin: { name: 'Tesamorelin', price: 89.99,  image: '' },
-  semax:       { name: 'Semax',       price: 79.99,  image: '' },
+  semax:       { name: 'Semax',       price: 79.99,  image: 'images/semax.jpg' },
 };
 
 let cart = JSON.parse(localStorage.getItem('mogpep_cart') || '[]');
@@ -2488,6 +2484,8 @@ const PRODUCT_IMGS = {
     'klow80': 'images/klow80_pdp.jpg',
     'retatrutide': 'images/retatrutide_pdp.jpg',
     'ipamorelin': 'images/ipamorelin_pdp.jpg',
+    'motsc': 'images/motsc.jpg',
+    'semax': 'images/semax.jpg',
     'mt2': 'images/mt2_pdp.jpg',
     'bb10': 'images/bb10_pdp.jpg',
     'cjc1295': 'images/cjc1295_pdp.jpg',
