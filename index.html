@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mogpep — Premium Peptide Research Solutions</title>
+<link rel="icon" type="image/png" href="images/logo.png">
+<link rel="apple-touch-icon" href="images/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Mono:wght@300;400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
@@ -1881,7 +1883,10 @@ footer{background:var(--white);border-top:1px solid var(--border-soft);padding:2
     </div>
 
     <div class="pcard" onclick="openProduct('motsc')" style="cursor:pointer">
-      <div class="pcard-img" style="background:var(--cream2);aspect-ratio:2/3"></div>
+      <div class="pcard-img" style="background:var(--cream2);aspect-ratio:2/3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.5rem">
+        <div style="width:44px;height:44px;border-radius:50%;background:var(--border);opacity:0.4"></div>
+        <span style="font-family:var(--ff-mono);font-size:0.5rem;letter-spacing:0.12em;color:var(--text-faint);text-transform:uppercase">Photo Coming Soon</span>
+      </div>
       <div class="pcard-accent acc-copper"></div>
       <div class="pcard-body">
         <p class="pcard-seq">11 — MP-2405-MOTSC</p>
@@ -1903,7 +1908,10 @@ footer{background:var(--white);border-top:1px solid var(--border-soft);padding:2
     </div>
 
     <div class="pcard" onclick="openProduct('tesamorelin')" style="cursor:pointer">
-      <div class="pcard-img" style="background:var(--cream2);aspect-ratio:2/3"></div>
+      <div class="pcard-img" style="background:var(--cream2);aspect-ratio:2/3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.5rem">
+        <div style="width:44px;height:44px;border-radius:50%;background:var(--border);opacity:0.4"></div>
+        <span style="font-family:var(--ff-mono);font-size:0.5rem;letter-spacing:0.12em;color:var(--text-faint);text-transform:uppercase">Photo Coming Soon</span>
+      </div>
       <div class="pcard-accent acc-teal"></div>
       <div class="pcard-body">
         <p class="pcard-seq">12 — MP-2405-TESA</p>
@@ -1925,7 +1933,10 @@ footer{background:var(--white);border-top:1px solid var(--border-soft);padding:2
     </div>
 
     <div class="pcard" onclick="openProduct('semax')" style="cursor:pointer">
-      <div class="pcard-img" style="background:var(--cream2);aspect-ratio:2/3"></div>
+      <div class="pcard-img" style="background:var(--cream2);aspect-ratio:2/3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.5rem">
+        <div style="width:44px;height:44px;border-radius:50%;background:var(--border);opacity:0.4"></div>
+        <span style="font-family:var(--ff-mono);font-size:0.5rem;letter-spacing:0.12em;color:var(--text-faint);text-transform:uppercase">Photo Coming Soon</span>
+      </div>
       <div class="pcard-accent acc-purple"></div>
       <div class="pcard-body">
         <p class="pcard-seq">13 — MP-2405-SEMAX</p>
@@ -2155,7 +2166,7 @@ function renderCart() {
     const div = document.createElement('div');
     div.className = 'cart-item';
     div.innerHTML = `
-      ${p.image ? `<img class="cart-item-img" src="${p.image}" alt="${p.name}">` : `<div class="cart-item-img" style="background:var(--cream2)"></div>`}
+      ${p.image ? `<img class="cart-item-img" src="${p.image}" alt="${p.name}">` : `<div class="cart-item-img" style="background:var(--cream2);display:flex;align-items:center;justify-content:center;text-align:center;font-family:var(--ff-mono);font-size:0.4rem;letter-spacing:0.08em;color:var(--text-faint);text-transform:uppercase;padding:2px">No Photo</div>`}
       <div class="cart-item-info">
         <div class="cart-item-name">${p.name}</div>
         <div class="cart-item-price">$${(p.price * item.qty).toFixed(2)}</div>
@@ -2504,7 +2515,10 @@ function openProduct(id) {
   const related = PRODUCTS.filter(x => x.id !== id).slice(0, 4);
   const relatedCards = related.map(r => `
     <div class="pcard" onclick="openProduct('${r.id}')" style="cursor:pointer">
-      ${PRODUCT_IMGS[r.id] ? `<div class="pcard-img"><img src="${PRODUCT_IMGS[r.id]}" alt="${r.name}" style="width:100%;height:100%;object-fit:cover;object-position:center 8%"></div>` : `<div class="pcard-img" style="background:var(--cream2);aspect-ratio:2/3"></div>`}
+      ${PRODUCT_IMGS[r.id] ? `<div class="pcard-img"><img src="${PRODUCT_IMGS[r.id]}" alt="${r.name}" style="width:100%;height:100%;object-fit:cover;object-position:center 8%"></div>` : `<div class="pcard-img" style="background:var(--cream2);aspect-ratio:2/3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.5rem">
+        <div style="width:44px;height:44px;border-radius:50%;background:var(--border);opacity:0.4"></div>
+        <span style="font-family:var(--ff-mono);font-size:0.5rem;letter-spacing:0.12em;color:var(--text-faint);text-transform:uppercase">Photo Coming Soon</span>
+      </div>`}
       <div class="pcard-accent" style="height:2px;background:${r.cap}"></div>
       <div class="pcard-body">
         <p class="pcard-sub" style="color:${r.cap}">${r.sub}</p>
