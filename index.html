@@ -1,9 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
 <meta charset="UTF-8">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18314952829"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18314952829');
+</script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mogpep — Premium Peptide Research Solutions</title>
+<title>Mogpep — Premium Research Peptides | Australia</title>
 <link rel="icon" type="image/png" href="images/logo.png">
 <link rel="apple-touch-icon" href="images/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1189,14 +1200,14 @@ footer{background:var(--white);border-top:1px solid var(--border-soft);padding:2
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mogpep.com/">
-  <meta property="og:title" content="Mogpep — Premium Peptide Research Solutions">
+  <meta property="og:title" content="Mogpep — Premium Research Peptides | Australia">
   <meta property="og:description" content="Premium lyophilised research peptides delivered across Australia. GHK-Cu, CJC-1295, Ipamorelin and more. Free express shipping on 2+ vials.">
   <meta property="og:image" content="https://mogpep.com/images/hero.png">
   <meta property="og:locale" content="en_AU">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Mogpep — Premium Peptide Research Solutions">
+  <meta name="twitter:title" content="Mogpep — Premium Research Peptides | Australia">
   <meta name="twitter:description" content="Premium lyophilised research peptides delivered across Australia.">
   <meta name="twitter:image" content="https://mogpep.com/images/hero.png">
   <!-- Structured Data -->
@@ -1210,7 +1221,15 @@ footer{background:var(--white);border-top:1px solid var(--border-soft);padding:2
       "name": "Mogpep Research Solutions",
       "url": "https://mogpep.com/",
       "logo": "https://mogpep.com/images/logo.png",
-      "description": "Supplier of premium lyophilised research peptides to Australian scientists and research institutions."
+      "description": "Supplier of premium lyophilised research peptides to Australian scientists and research institutions.",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Australia"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "AU"
+      }
     },
     {
       "@type": "WebSite",
@@ -1451,6 +1470,107 @@ footer{background:var(--white);border-top:1px solid var(--border-soft);padding:2
           "@id": "https://mogpep.com/#organization"
         }
       }
+    },
+    {
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How long does delivery take to my state?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "All orders are shipped via Australia Post Express or equivalent express courier. NSW, VIC, and ACT typically arrive next business day. QLD and SA typically arrive within 1-2 business days. WA, NT, and TAS typically arrive within 2-3 business days. Orders placed before 12pm AEST on business days are typically dispatched same day."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How much does shipping cost?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Orders of 2 or more vials qualify for free express shipping Australia-wide. Single vial orders are charged a flat rate express shipping fee at checkout. We do not offer standard (non-express) shipping \u2014 all orders are sent express to maintain product integrity."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do you ship internationally?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No, Mogpep currently ships within Australia only. We do not accept international orders at this time."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Will I receive tracking for my order?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, all orders are sent with full tracking. You will receive a tracking number via email once your order has been dispatched."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What happens if I'm not home for delivery?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "If you are not available at the time of delivery, the courier will leave a card and the parcel will be taken to your nearest collection point or post office."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I place an order?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Browse our product catalogue, add the compounds you need to your cart, and proceed to checkout. Payment is processed securely through Stripe."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What payment methods do you accept?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We accept all major credit and debit cards through our secure Stripe checkout."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I get a bulk or wholesale discount?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, we offer pricing for bulk and wholesale orders. Contact us with the compounds and quantities you require for a custom quote within 24 hours."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I verify the purity of my order?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Every Mogpep order includes a Certificate of Analysis (CoA) from an independent, accredited third-party laboratory, confirming purity via RP-HPLC and identity via mass spectrometry. You can verify your batch at mogpep.com/verify using the QR code on your vial."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How should I store my peptides?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Lyophilized (unreconstituted) peptides should be stored at -20\u00b0C in a sealed container, protected from light and moisture, and are stable for up to 24 months when stored correctly. After reconstitution, store at 2-8\u00b0C and use within 28 days. Do not refreeze after reconstitution."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I reconstitute a lyophilized peptide?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Use bacteriostatic water or sterile water for injection. Add the solvent slowly down the inside wall of the vial rather than directly onto the powder, then gently swirl until fully dissolved. Always perform reconstitution under sterile conditions using appropriate lab technique."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Are these products for human use?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. All Mogpep products are strictly for in vitro laboratory research use only. They are not intended for human or veterinary consumption, clinical use, or any application outside a controlled research environment, and are not TGA-approved therapeutic goods."
+                }
+            }
+        ]
     }
   ]
 }
@@ -2746,7 +2866,7 @@ window.addEventListener('DOMContentLoaded', () => {
           <span class="faq-arrow">+</span>
         </div>
         <div class="faq-a">
-          Browse our product catalogue, add the compounds you need to your cart, and proceed to checkout. Payment integration is coming soon — in the meantime, please contact us at research@mogpep.com to place an order directly.
+          Browse our product catalogue, add the compounds you need to your cart, and proceed to checkout — payment is processed securely through Stripe. You'll receive an order confirmation by email immediately after purchase.
         </div>
       </div>
 
@@ -2756,7 +2876,7 @@ window.addEventListener('DOMContentLoaded', () => {
           <span class="faq-arrow">+</span>
         </div>
         <div class="faq-a">
-          We are currently setting up our online payment system. We will be accepting major credit and debit cards, bank transfer, and PayID. For immediate orders please contact us at research@mogpep.com and we will arrange payment directly.
+          We accept all major credit and debit cards through our secure Stripe checkout. Payment is processed at the time of order.
         </div>
       </div>
 
