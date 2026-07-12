@@ -93,8 +93,8 @@ nav{
 .btn-ghost::after{content:'→';transition:transform 0.3s}
 .btn-ghost:hover{color:var(--gold)}
 .btn-ghost:hover::after{transform:translateX(5px)}
-.hero-badges{position:absolute;bottom:3.5rem;left:5rem;z-index:2;display:flex;gap:3rem;border-top:1px solid var(--border-gold);padding-top:1.5rem}
-.hbadge{display:flex;flex-direction:column;gap:0.2rem}
+.hero-badges{margin:3rem auto 0;max-width:fit-content;display:flex;justify-content:center;gap:3rem;border-top:1px solid var(--border-gold);padding-top:1.5rem}
+.hbadge{display:flex;flex-direction:column;align-items:center;gap:0.2rem}
 .hbadge-val{font-family:var(--ff-serif);font-size:1.7rem;font-weight:300;color:var(--gold);line-height:1}
 .hbadge-lbl{font-family:var(--ff-mono);font-size:0.5rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-faint)}
 
@@ -436,8 +436,7 @@ footer{background:var(--white);border-top:1px solid var(--border-soft);padding:2
   .hero-actions{flex-direction:column;align-items:center;gap:1rem}
   .btn-ink{width:100%;text-align:center;padding:1rem}
   .hero-badges{
-    left:1.25rem;bottom:1.5rem;gap:1.5rem;
-    flex-wrap:wrap;
+    gap:1.5rem;flex-wrap:wrap;margin-top:2rem;
   }
   .hbadge-val{font-size:1.3rem}
 
@@ -1639,11 +1638,6 @@ footer{background:var(--white);border-top:1px solid var(--border-soft);padding:2
       <a href="#quality" class="btn-ghost">Our Standards</a>
     </div>
   </div>
-  <div class="hero-badges au d4">
-    <div class="hbadge"><span class="hbadge-val">≥99%</span><span class="hbadge-lbl">Purity Guaranteed</span></div>
-    <div class="hbadge"><span class="hbadge-val">CoA</span><span class="hbadge-lbl">Every Order</span></div>
-    <div class="hbadge"><span class="hbadge-val">48h</span><span class="hbadge-lbl">Dispatch</span></div>
-  </div>
 </section>
 
 <!-- MARQUEE -->
@@ -1680,7 +1674,7 @@ footer{background:var(--white);border-top:1px solid var(--border-soft);padding:2
 <!-- ORDERS COUNTER -->
 <div class="counter-strip">
   <div class="counter-item">
-    <div class="counter-num" id="cnt-orders">0</div>
+    <div class="counter-num" id="cnt-orders">35</div>
     <div class="counter-label">Orders Shipped</div>
   </div>
   <div class="counter-item">
