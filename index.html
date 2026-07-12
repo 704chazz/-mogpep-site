@@ -66,7 +66,7 @@ nav{
 .nav-cta:hover{background:var(--ink2)}
 
 /* ── HERO ── */
-.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;background:var(--cream)}
 .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}
 .hero-veil{
   position:absolute;inset:0;
@@ -1628,8 +1628,6 @@ footer{background:var(--white);border-top:1px solid var(--border-soft);padding:2
 
 <!-- HERO -->
 <section class="hero" id="home">
-  <img class="hero-bg" src="images/hero.png" alt="Mogpep vials">
-  <div class="hero-veil"></div>
   <div class="hero-content">
     <p class="hero-eyebrow au">Premium Peptide Research Solutions</p>
     <h1 class="hero-headline au d1">Advancing<br><em>human</em><br>potential.</h1>
@@ -2235,6 +2233,10 @@ async function proceedToCheckout() {
     if (!res.ok || !data.url) {
       throw new Error(data.error || 'Checkout could not be started.');
     }
+    // Stash the order value so we can report an accurate Google Ads
+    // conversion when the customer lands back on the success page.
+    const orderValue = cart.reduce((s, i) => s + (CATALOG[i.id]?.price || 0) * i.qty, 0);
+    sessionStorage.setItem('mogpep_pending_order_value', orderValue.toFixed(2));
     window.location.href = data.url;
   } catch (err) {
     console.error('Mogpep: checkout failed:', err);
@@ -2245,6 +2247,29 @@ async function proceedToCheckout() {
 }
 
 document.addEventListener('DOMContentLoaded', renderCart);
+
+document.addEventListener('DOMContentLoaded', () => {
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('checkout') !== 'success') return;
+
+  const sessionId = params.get('session_id') || '';
+  const orderValue = parseFloat(sessionStorage.getItem('mogpep_pending_order_value') || '0');
+
+  if (typeof gtag === 'function' && orderValue > 0) {
+    gtag('event', 'conversion', {
+      'send_to': 'AW-18314952829/sYygCOvjo84cEP2AoJ1E',
+      'value': orderValue,
+      'currency': 'AUD',
+      'transaction_id': sessionId,
+    });
+  }
+
+  // Order succeeded — clear the cart and clean up so this doesn't fire again on refresh.
+  cart = [];
+  saveCart();
+  sessionStorage.removeItem('mogpep_pending_order_value');
+  window.history.replaceState({}, document.title, window.location.pathname);
+});
 
 function toggleQF(el){
   const open=el.classList.contains('open');
