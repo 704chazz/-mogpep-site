@@ -93,10 +93,7 @@ nav{
 .btn-ghost::after{content:'→';transition:transform 0.3s}
 .btn-ghost:hover{color:var(--gold)}
 .btn-ghost:hover::after{transform:translateX(5px)}
-.hero-badges{margin:3rem auto 0;max-width:fit-content;display:flex;justify-content:center;gap:3rem;border-top:1px solid var(--border-gold);padding-top:1.5rem}
-.hbadge{display:flex;flex-direction:column;align-items:center;gap:0.2rem}
-.hbadge-val{font-family:var(--ff-serif);font-size:1.7rem;font-weight:300;color:var(--gold);line-height:1}
-.hbadge-lbl{font-family:var(--ff-mono);font-size:0.5rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-faint)}
+
 
 /* ── MARQUEE ── */
 .marquee-strip{background:var(--ink);padding:0.7rem 0;overflow:hidden;white-space:nowrap}
@@ -435,10 +432,6 @@ footer{background:var(--white);border-top:1px solid var(--border-soft);padding:2
   .hero-body{margin-bottom:2rem}
   .hero-actions{flex-direction:column;align-items:center;gap:1rem}
   .btn-ink{width:100%;text-align:center;padding:1rem}
-  .hero-badges{
-    gap:1.5rem;flex-wrap:wrap;margin-top:2rem;
-  }
-  .hbadge-val{font-size:1.3rem}
 
   /* Sections */
   section{padding:4rem 1.25rem}
@@ -518,9 +511,6 @@ footer{background:var(--white);border-top:1px solid var(--border-soft);padding:2
   .hero{min-height:100svh;padding-bottom:4rem}
   .hero-headline{font-size:clamp(2.6rem,13vw,4rem)}
   .hero-body{font-size:0.88rem}
-  .hero-badges{gap:1.25rem;padding-top:1rem}
-  .hbadge-val{font-size:1.15rem}
-  .hbadge-lbl{font-size:0.45rem}
 
   /* Counter strip */
   .counter-strip{grid-template-columns:repeat(2,1fr);padding:1.5rem 1rem;gap:1.25rem}
@@ -559,7 +549,7 @@ footer{background:var(--white);border-top:1px solid var(--border-soft);padding:2
 /* ── PRODUCT DETAIL PAGE ── */
 .pdp-overlay{
   display:none;position:fixed;inset:0;z-index:500;
-  background:var(--white);overflow-y:auto;
+  background:var(--white);overflow-y:auto;overflow-x:hidden;
   animation:pdpIn 0.4s cubic-bezier(0.4,0,0.2,1);
 }
 .pdp-overlay.open{display:block}
@@ -624,7 +614,7 @@ footer{background:var(--white);border-top:1px solid var(--border-soft);padding:2
   margin-top:1rem;
   font-family:var(--ff-mono);font-size:0.55rem;
   letter-spacing:0.15em;color:var(--text-faint);
-  display:flex;justify-content:space-between;
+  display:flex;flex-wrap:wrap;justify-content:space-between;gap:0.5rem;
   padding-top:0.75rem;border-top:1px solid var(--border-soft);
 }
 
@@ -1682,7 +1672,7 @@ footer{background:var(--white);border-top:1px solid var(--border-soft);padding:2
     <div class="counter-label">Purity Guaranteed</div>
   </div>
   <div class="counter-item">
-    <div class="counter-num" id="cnt-products">10</div>
+    <div class="counter-num" id="cnt-products">9</div>
     <div class="counter-label">Research Compounds</div>
   </div>
   <div class="counter-item">
@@ -1722,7 +1712,6 @@ footer{background:var(--white);border-top:1px solid var(--border-soft);padding:2
       <p class="s-label">Product Catalogue</p>
       <h2 class="s-title">Research <em>peptides.</em></h2>
     </div>
-    <button class="btn-ghost">Request CoA documents</button>
   </div>
   <div class="products-grid">
 
