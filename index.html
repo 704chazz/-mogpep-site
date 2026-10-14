@@ -1604,6 +1604,10 @@ html{overflow-x:clip}
   .hero-figure{margin:0 -1.25rem}
   .counter-strip{grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
   .trust-grid{grid-template-columns:1fr}
+  /* product view: stack image above details (base rule is declared after the old media query) */
+  .pdp-body{grid-template-columns:1fr;gap:2rem;padding:2rem 1.25rem 5rem}
+  .pdp-image-wrap{position:static}
+  .pdp-info{min-width:0}
 }
 </style>
 <script>
@@ -1755,7 +1759,7 @@ document.addEventListener('DOMContentLoaded',function(){var n=document.getElemen
       <div class="pcard-body">
         <p class="pcard-seq">03 — MP-2405-GHKCU</p>
         <p class="pcard-sub col-copper">Copper Peptide</p>
-        <h3 class="pcard-name" style="cursor:pointer" onclick="openProduct('ghkcu')">GHK-CU</h3>
+        <h3 class="pcard-name" style="cursor:pointer"><a href="/ghk-cu/" onclick="event.preventDefault()" style="color:inherit;text-decoration:none">GHK-CU</a></h3>
         <p class="pcard-detail">100mg · Studied for wound healing and collagen synthesis research.</p>
         <div class="pcard-specs">
           <span class="pcard-spec-k">CAS</span><span class="pcard-spec-v">49557-75-7</span>
@@ -1777,7 +1781,7 @@ document.addEventListener('DOMContentLoaded',function(){var n=document.getElemen
       <div class="pcard-body">
         <p class="pcard-seq">04 — MP-2405-GT1500</p>
         <p class="pcard-sub col-silver">Glutathione</p>
-        <h3 class="pcard-name" style="cursor:pointer" onclick="openProduct('gt1500')">GT1500</h3>
+        <h3 class="pcard-name" style="cursor:pointer"><a href="/gt1500/" onclick="event.preventDefault()" style="color:inherit;text-decoration:none">GT1500</a></h3>
         <p class="pcard-detail">1500mg · Researched for cellular protection and oxidative stress reduction.</p>
         <div class="pcard-specs">
           <span class="pcard-spec-k">CAS</span><span class="pcard-spec-v">70-18-8</span>
@@ -1795,14 +1799,14 @@ document.addEventListener('DOMContentLoaded',function(){var n=document.getElemen
 
 
 
-    <div class="pcard">
+    <div class="pcard" onclick="openProduct('cjc1295')" style="cursor:pointer">
       <div class="pcard-img"><img loading="lazy" decoding="async" src="images/cjc1295.jpg" alt="CJC-1295" style="width:100%;height:100%;object-fit:cover;object-position:center 8%;display:block;transition:transform 0.55s ease"></div>
       <div class="pcard-accent" style="background:#3B7A57;height:2px"></div>
       <div class="pcard-body">
         <div class="pcard-badge badge-new">New</div>
         <p class="pcard-seq">05 — MP-2405-CJC195</p>
         <p class="pcard-sub" style="color:#3B7A57">With DAC</p>
-        <h3 class="pcard-name" style="cursor:pointer" onclick="openProduct('cjc1295')">CJC-1295</h3>
+        <h3 class="pcard-name" style="cursor:pointer"><a href="/cjc-1295/" onclick="event.preventDefault()" style="color:inherit;text-decoration:none">CJC-1295</a></h3>
         <p class="pcard-detail">5mg · Modified GHRH analogue studied for its extended half-life in growth hormone research.</p>
         <div class="pcard-specs">
           <span class="pcard-spec-k">CAS</span><span class="pcard-spec-v">863288-34-0</span>
@@ -1825,7 +1829,7 @@ document.addEventListener('DOMContentLoaded',function(){var n=document.getElemen
         <div class="pcard-badge badge-new">New</div>
         <p class="pcard-seq">06 — MP-2405-IPAM</p>
         <p class="pcard-sub" style="color:#94600A">Growth Hormone Secretagogue</p>
-        <h3 class="pcard-name" style="cursor:pointer" onclick="openProduct('ipamorelin')">Ipamorelin</h3>
+        <h3 class="pcard-name" style="cursor:pointer"><a href="/ipamorelin/" onclick="event.preventDefault()" style="color:inherit;text-decoration:none">Ipamorelin</a></h3>
         <p class="pcard-detail">5mg · Selective GH secretagogue studied for growth hormone release with minimal cortisol interaction.</p>
         <div class="pcard-specs">
           <span class="pcard-spec-k">CAS</span><span class="pcard-spec-v">170851-70-4</span>
@@ -1848,7 +1852,7 @@ document.addEventListener('DOMContentLoaded',function(){var n=document.getElemen
         <div class="pcard-badge badge-new">New</div>
         <p class="pcard-seq">08 — MP-2405-RETA</p>
         <p class="pcard-sub" style="color:#3B6A9A">GLP-1 / GIP / Glucagon Agonist</p>
-        <h3 class="pcard-name" style="cursor:pointer" onclick="openProduct('retatrutide')">Retatrutide</h3>
+        <h3 class="pcard-name" style="cursor:pointer"><a href="/retatrutide/" onclick="event.preventDefault()" style="color:inherit;text-decoration:none">Retatrutide</a></h3>
         <p class="pcard-detail">5mg · Triple receptor agonist (GLP-1, GIP, glucagon) studied for metabolic research and body composition applications.</p>
         <div class="pcard-specs">
           <span class="pcard-spec-k">CAS</span><span class="pcard-spec-v">2381089-83-2</span>
@@ -1871,7 +1875,7 @@ document.addEventListener('DOMContentLoaded',function(){var n=document.getElemen
       <div class="pcard-body">
         <p class="pcard-seq">08 — MP-2405-BB10</p>
         <p class="pcard-sub" style="color:#167A66">BB10 Blend</p>
-        <h3 class="pcard-name">BPC-157 + TB-500</h3>
+        <h3 class="pcard-name"><a href="/bb10-bpc-157-tb-500/" onclick="event.preventDefault()" style="color:inherit;text-decoration:none">BPC-157 + TB-500</a></h3>
         <p class="pcard-detail">10mg · 5mg/5mg blend of BPC-157 and TB-500 in a single lyophilized vial.</p>
         <div class="pcard-specs">
           <span class="pcard-spec-k">Contents</span><span class="pcard-spec-v">BPC-157 5mg + TB-500 5mg</span>
@@ -1895,7 +1899,7 @@ document.addEventListener('DOMContentLoaded',function(){var n=document.getElemen
         <p class="pcard-seq">09 — MP-2405-MT2</p>
         <div class="stock-badge stock-low"><span class="stock-dot"></span>Low Stock — 7 remaining</div>
         <p class="pcard-sub" style="color:#C0392B">Melanotan 2</p>
-        <h3 class="pcard-name">MT2</h3>
+        <h3 class="pcard-name"><a href="/melanotan-2-mt2/" onclick="event.preventDefault()" style="color:inherit;text-decoration:none">MT2</a></h3>
         <p class="pcard-detail">10mg · Synthetic analogue of α-MSH studied for melanogenesis and related receptor research.</p>
         <div class="pcard-specs">
           <span class="pcard-spec-k">CAS</span><span class="pcard-spec-v">121062-08-6</span>
@@ -1918,7 +1922,7 @@ document.addEventListener('DOMContentLoaded',function(){var n=document.getElemen
         <p class="pcard-seq">10 — MP-2405-KLOW80</p>
         <div class="stock-badge stock-low"><span class="stock-dot"></span>Low Stock — 6 remaining</div>
         <p class="pcard-sub" style="color:#B8601A">Klow Blend</p>
-        <h3 class="pcard-name">KLOW80</h3>
+        <h3 class="pcard-name"><a href="/klow80/" onclick="event.preventDefault()" style="color:inherit;text-decoration:none">KLOW80</a></h3>
         <p class="pcard-detail">80mg · BPC-157 10mg · TB-500 10mg · GHK-Cu 50mg · KPV 10mg in a single lyophilised vial.</p>
         <div class="pcard-specs">
           <span class="pcard-spec-k">Contents</span><span class="pcard-spec-v">BPC-157 · TB-500 · GHK-Cu · KPV</span>
@@ -1939,7 +1943,7 @@ document.addEventListener('DOMContentLoaded',function(){var n=document.getElemen
       <div class="pcard-body">
         <p class="pcard-seq">11 — MP-2405-MOTSC</p>
         <p class="pcard-sub" style="color:#B8601A">Mitochondrial-Derived Peptide</p>
-        <h3 class="pcard-name" style="cursor:pointer" onclick="openProduct('motsc')">MOTS-c</h3>
+        <h3 class="pcard-name" style="cursor:pointer"><a href="/mots-c/" onclick="event.preventDefault()" style="color:inherit;text-decoration:none">MOTS-c</a></h3>
         <p class="pcard-detail">10mg · Studied for metabolic homeostasis and mitochondrial signaling research.</p>
         <div class="pcard-specs">
           <span class="pcard-spec-k">CAS</span><span class="pcard-spec-v">1627580-64-6</span>
@@ -1961,7 +1965,7 @@ document.addEventListener('DOMContentLoaded',function(){var n=document.getElemen
       <div class="pcard-body">
         <p class="pcard-seq">12 — MP-2405-TESA</p>
         <p class="pcard-sub" style="color:#167A66">GHRH Analogue</p>
-        <h3 class="pcard-name" style="cursor:pointer" onclick="openProduct('tesamorelin')">Tesamorelin</h3>
+        <h3 class="pcard-name" style="cursor:pointer"><a href="/tesamorelin/" onclick="event.preventDefault()" style="color:inherit;text-decoration:none">Tesamorelin</a></h3>
         <p class="pcard-detail">10mg · Studied in GHRH-receptor signalling and IGF-1 axis research.</p>
         <div class="pcard-specs">
           <span class="pcard-spec-k">CAS</span><span class="pcard-spec-v">218949-48-5</span>
@@ -1983,7 +1987,7 @@ document.addEventListener('DOMContentLoaded',function(){var n=document.getElemen
       <div class="pcard-body">
         <p class="pcard-seq">13 — MP-2405-SEMAX</p>
         <p class="pcard-sub" style="color:#6B3FAA">Nootropic Peptide</p>
-        <h3 class="pcard-name" style="cursor:pointer" onclick="openProduct('semax')">Semax</h3>
+        <h3 class="pcard-name" style="cursor:pointer"><a href="/semax/" onclick="event.preventDefault()" style="color:inherit;text-decoration:none">Semax</a></h3>
         <p class="pcard-detail">5mg · Studied for BDNF modulation and neuroprotective research.</p>
         <div class="pcard-specs">
           <span class="pcard-spec-k">CAS</span><span class="pcard-spec-v">80714-61-0</span>
@@ -2482,6 +2486,44 @@ const PRODUCTS = [
     "exp": "05/2027",
     "sequence": "Met-Glu-His-Phe-Pro-Gly-Pro",
     "mw": "813.93 g/mol"
+  },
+  {
+    "id": "mt2",
+    "name": "MT2",
+    "sub": "Melanotan 2",
+    "dose": "10mg",
+    "cas": "121062-08-6",
+    "batch": "MP-2405-MT2",
+    "cap": "#C0392B",
+    "price": 60,
+    "img": "mt2",
+    "description": "MT2 (Melanotan II) is a synthetic cyclic heptapeptide analogue of alpha-melanocyte-stimulating hormone (α-MSH).",
+    "research": "Studied in preclinical research for its activity at melanocortin receptors and its role in melanogenesis and related receptor signalling.",
+    "storage": "Store lyophilized peptide at 2–8°C. Protect from light and moisture.",
+    "form": "Lyophilized Powder",
+    "source": "Synthetic",
+    "exp": "See CoA",
+    "sequence": "Ac-Nle-cyclo[Asp-His-D-Phe-Arg-Trp-Lys]-NH₂",
+    "mw": "1024.2 g/mol"
+  },
+  {
+    "id": "klow80",
+    "name": "KLOW80",
+    "sub": "Klow Blend",
+    "dose": "80mg",
+    "cas": "Multiple components",
+    "batch": "MP-2405-KLOW80",
+    "cap": "#B8601A",
+    "price": 160,
+    "img": "klow80",
+    "description": "KLOW80 is a lyophilised research blend combining BPC-157 (10mg), TB-500 (10mg), GHK-Cu (50mg) and KPV (10mg) in a single vial.",
+    "research": "Each component is studied individually in preclinical research. The blend is supplied for researchers investigating these peptides together under one protocol.",
+    "storage": "Store lyophilized peptide at 2–8°C. Protect from light and moisture.",
+    "form": "Lyophilized Powder",
+    "source": "Synthetic",
+    "exp": "See CoA",
+    "sequence": "BPC-157 10mg · TB-500 10mg · GHK-Cu 50mg · KPV 10mg",
+    "mw": "Multiple components"
   }
 ];
 
@@ -2524,6 +2566,16 @@ const PRODUCT_IMGS = {
     'kpv': 'images/kpv_pdp.jpg'
   };
 
+const PRODUCT_SLUGS = {"ghkcu": "ghk-cu", "gt1500": "gt1500", "cjc1295": "cjc-1295", "ipamorelin": "ipamorelin", "bb10": "bb10-bpc-157-tb-500", "retatrutide": "retatrutide", "mt2": "melanotan-2-mt2", "klow80": "klow80", "motsc": "mots-c", "tesamorelin": "tesamorelin", "semax": "semax"};
+const PDP_H = window.MOGPEP_PAGE ? 'h1' : 'h2';
+function productUrl(id) { return '/' + PRODUCT_SLUGS[id] + '/'; }
+function goProduct(id) { if (window.MOGPEP_PAGE) { location.href = productUrl(id); } else { openProduct(id); } }
+window.addEventListener('popstate', function () {
+  if (!window.MOGPEP_PAGE && location.pathname === '/') {
+    document.getElementById('pdpOverlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+});
 let pdpQty = 1;
 
 function openProduct(id) {
@@ -2540,7 +2592,7 @@ function openProduct(id) {
 
   const related = PRODUCTS.filter(x => x.id !== id).slice(0, 4);
   const relatedCards = related.map(r => `
-    <div class="pcard" onclick="openProduct('${r.id}')" style="cursor:pointer">
+    <div class="pcard" onclick="goProduct('${r.id}')" style="cursor:pointer">
       ${PRODUCT_IMGS[r.id] ? `<div class="pcard-img"><img src="${PRODUCT_IMGS[r.id]}" alt="${r.name}" style="width:100%;height:100%;object-fit:cover;object-position:center 8%"></div>` : `<div class="pcard-img" style="background:var(--cream2);aspect-ratio:2/3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.5rem">
         <div style="width:44px;height:44px;border-radius:50%;background:var(--border);opacity:0.4"></div>
         <span style="font-family:var(--ff-mono);font-size:0.75rem;letter-spacing:0.12em;color:var(--text-faint);text-transform:uppercase">Photo Coming Soon</span>
@@ -2548,7 +2600,7 @@ function openProduct(id) {
       <div class="pcard-accent" style="height:2px;background:${r.cap}"></div>
       <div class="pcard-body">
         <p class="pcard-sub" style="color:${r.cap}">${r.sub}</p>
-        <h3 class="pcard-name">${r.name}</h3>
+        <h3 class="pcard-name"><a href="${productUrl(r.id)}" onclick="event.preventDefault()" style="color:inherit;text-decoration:none">${r.name}</a></h3>
         <div class="pcard-footer" style="margin-top:0.75rem;padding-top:0.75rem;border-top:1px solid var(--border-soft);display:flex;justify-content:space-between;align-items:center">
           <span class="pcard-price">$${fmtPrice(r.price)}</span>
           <button class="pcard-btn" onclick="event.stopPropagation();addToCart('${r.id}')">Add</button>
@@ -2577,7 +2629,7 @@ function openProduct(id) {
 
       <div class="pdp-info">
         <p class="pdp-eyebrow">${p.sub}</p>
-        <h2 class="pdp-name" style="color:${p.cap}">${p.name}</h2>
+        <${PDP_H} class="pdp-name" style="color:${p.cap}">${p.name}</${PDP_H}>
         <p class="pdp-sub">${p.dose} · Lyophilized Powder · Research Use Only</p>
 
         <div class="pdp-price-row">
@@ -2666,14 +2718,15 @@ function openProduct(id) {
   overlay.classList.add('open');
   overlay.scrollTop = 0;
   document.body.style.overflow = 'hidden';
-  // Push state so browser back button works
-  history.pushState({ pdp: id }, '', '#' + id);
+  // Real product URL so links are shareable and match the static product pages
+  if (!window.MOGPEP_PAGE) history.pushState({ pdp: id }, '', productUrl(id));
 }
 
 function closeProduct() {
+  if (window.MOGPEP_PAGE) { location.href = '/#products'; return; }
   document.getElementById('pdpOverlay').classList.remove('open');
   document.body.style.overflow = '';
-  history.pushState(null, '', window.location.pathname);
+  history.pushState(null, '', '/');
 }
 
 function pdpChangeQty(delta) {
