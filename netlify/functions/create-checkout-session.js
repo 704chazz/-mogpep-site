@@ -25,6 +25,9 @@ const PRODUCTS = {
   semax:       { name: 'Semax',        price: 7000  },
 };
 
+// Products that can't be bought right now. Keep in sync with STOCK in index.html.
+const OUT_OF_STOCK = new Set(['gt1500']);
+
 exports.handler = async (event) => {
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method Not Allowed' };
@@ -54,6 +57,9 @@ exports.handler = async (event) => {
     const product = PRODUCTS[item.id];
     if (!product) {
       return { statusCode: 400, body: JSON.stringify({ error: `Unknown product: ${item.id}` }) };
+    }
+    if (OUT_OF_STOCK.has(item.id)) {
+      return { statusCode: 400, body: JSON.stringify({ error: `${product.name} is out of stock. Please remove it from your cart.` }) };
     }
     const quantity = Math.max(1, Math.min(99, parseInt(item.quantity, 10) || 1));
     totalQty += quantity;

@@ -47,7 +47,7 @@ const PDP_H = 'h1';
 let pdpQty = 1;
 %s
 const out = {};
-for (const p of PRODUCTS) { openProduct(p.id); out[p.id] = { html: overlay.innerHTML, product: p, slug: PRODUCT_SLUGS[p.id], img: PRODUCT_IMGS[p.id] }; }
+for (const p of PRODUCTS) { openProduct(p.id); out[p.id] = { html: overlay.innerHTML, product: p, slug: PRODUCT_SLUGS[p.id], img: PRODUCT_IMGS[p.id], stock: (STOCK[p.id] || {}).status || 'in' }; }
 process.stdout.write(JSON.stringify(out));
 """ % "\n".join(js_parts)
 with tempfile.NamedTemporaryFile("w", suffix=".js", delete=False, encoding="utf-8") as tmp:
@@ -99,7 +99,7 @@ for pid, r in rendered.items():
         {"@type": "Product", "@id": url + "#product", "name": f"{p['name']} {p['dose']}", "sku": pid,
          "description": p["description"], "image": img, "brand": {"@type": "Brand", "name": "Mogpep"},
          "offers": {"@type": "Offer", "url": url, "priceCurrency": "AUD", "price": p["price"],
-                    "availability": "https://schema.org/InStock",
+                    "availability": "https://schema.org/" + ("OutOfStock" if r.get("stock") == "out" else "InStock"),
                     "seller": {"@type": "Organization", "name": "Mogpep Research Solutions", "url": SITE}}},
         {"@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE},

@@ -1283,6 +1283,8 @@ html{overflow-x:clip}
 /* ── REFINE: one stats strip, one trust strip ── */
 .counter-strip{grid-template-columns:repeat(3,minmax(0,1fr))}
 .trust-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.pcard.out-of-stock{pointer-events:auto}
+.pcard-btn[disabled],.pdp-add-btn[disabled]{background:var(--border);color:var(--text-muted);cursor:not-allowed}
 /* ── REFINE: calmer product cards (full specs stay on the product page) ── */
 .pcard-seq,.pcard-specs{display:none}
 .pcard-detail{font-size:0.82rem;margin-bottom:1.1rem}
@@ -1968,7 +1970,7 @@ const PRODUCTS = [
 
 const STOCK = {
   ghkcu:       { status: 'low', qty: 8  },
-  gt1500:      { status: 'in',  qty: 24 },
+  gt1500:      { status: 'out', qty: 0  },
   cjc1295:     { status: 'in',  qty: 19 },
   ipamorelin:  { status: 'in',  qty: 22 },
   retatrutide: { status: 'low', qty: 5  },
@@ -2092,8 +2094,8 @@ function openProduct(id) {
             <div class="pdp-qty-val" id="pdpQtyVal">1</div>
             <button class="pdp-qty-btn" onclick="pdpChangeQty(1)">+</button>
           </div>
-          <button class="pdp-add-btn" onclick="${STOCK[p.id]?.status === 'out' ? 'return false' : `pdpAddToCart('${p.id}')`}">
-            Add to Cart →
+          <button class="pdp-add-btn" ${STOCK[p.id]?.status === 'out' ? 'disabled aria-disabled="true"' : `onclick="pdpAddToCart('${p.id}')"`}>
+            ${STOCK[p.id]?.status === 'out' ? 'Out of Stock' : 'Add to Cart →'}
           </button>
         </div>
 

@@ -1276,7 +1276,7 @@ html{overflow-x:clip}
         "url": "https://mogpep.com/",
         "priceCurrency": "AUD",
         "price": 80,
-        "availability": "https://schema.org/InStock",
+        "availability": "https://schema.org/OutOfStock",
         "seller": {
           "@id": "https://mogpep.com/#organization"
         }
@@ -1591,6 +1591,8 @@ html{overflow-x:clip}
 /* ── REFINE: one stats strip, one trust strip ── */
 .counter-strip{grid-template-columns:repeat(3,minmax(0,1fr))}
 .trust-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.pcard.out-of-stock{pointer-events:auto}
+.pcard-btn[disabled],.pdp-add-btn[disabled]{background:var(--border);color:var(--text-muted);cursor:not-allowed}
 /* ── REFINE: calmer product cards (full specs stay on the product page) ── */
 .pcard-seq,.pcard-specs{display:none}
 .pcard-detail{font-size:0.82rem;margin-bottom:1.1rem}
@@ -1757,7 +1759,7 @@ document.addEventListener('DOMContentLoaded',function(){var n=document.getElemen
       </div>
     </div>
 
-    <div class="pcard" onclick="openProduct('gt1500')" style="cursor:pointer">
+    <div class="pcard out-of-stock" onclick="openProduct('gt1500')" style="cursor:pointer">
       <div class="pcard-img"><img loading="lazy" decoding="async" src="/images/gt1500.jpg" alt="GT1500" style="width:100%;height:100%;object-fit:cover;object-position:center 8%;display:block;transition:transform 0.55s ease"></div>
       <div class="pcard-accent acc-black"></div>
       <div class="pcard-body">
@@ -1771,10 +1773,10 @@ document.addEventListener('DOMContentLoaded',function(){var n=document.getElemen
           <span class="pcard-spec-k">Purity</span><span class="pcard-spec-v">≥99%</span>
           <span class="pcard-spec-k">Batch</span><span class="pcard-spec-v">MP-2405-GT1500</span>
         </div>
-        <div class="stock-badge stock-in"><span class="stock-dot"></span>In Stock — 24 units</div>
+        <div class="stock-badge stock-out"><span class="stock-dot"></span>Out of Stock</div>
         <div class="pcard-footer">
           <span class="pcard-price">$80</span>
-          <button class="pcard-btn" onclick="event.stopPropagation();addToCart('gt1500')" data-item-id="gt1500">Add to Cart</button>
+          <button class="pcard-btn" onclick="event.stopPropagation()" data-item-id="gt1500" disabled aria-disabled="true">Out of Stock</button>
         </div>
       </div>
     </div>
@@ -2499,7 +2501,7 @@ const PRODUCTS = [
 
 const STOCK = {
   ghkcu:       { status: 'low', qty: 8  },
-  gt1500:      { status: 'in',  qty: 24 },
+  gt1500:      { status: 'out', qty: 0  },
   cjc1295:     { status: 'in',  qty: 19 },
   ipamorelin:  { status: 'in',  qty: 22 },
   retatrutide: { status: 'low', qty: 5  },
@@ -2623,8 +2625,8 @@ function openProduct(id) {
             <div class="pdp-qty-val" id="pdpQtyVal">1</div>
             <button class="pdp-qty-btn" onclick="pdpChangeQty(1)">+</button>
           </div>
-          <button class="pdp-add-btn" onclick="${STOCK[p.id]?.status === 'out' ? 'return false' : `pdpAddToCart('${p.id}')`}">
-            Add to Cart →
+          <button class="pdp-add-btn" ${STOCK[p.id]?.status === 'out' ? 'disabled aria-disabled="true"' : `onclick="pdpAddToCart('${p.id}')"`}>
+            ${STOCK[p.id]?.status === 'out' ? 'Out of Stock' : 'Add to Cart →'}
           </button>
         </div>
 
