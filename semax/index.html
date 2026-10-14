@@ -1302,6 +1302,28 @@ html{overflow-x:clip}
   .pdp-image-wrap{position:static}
   .pdp-info{min-width:0}
 }
+/* ── WHY MOGPEP + HOME FAQ ── */
+#why{background:var(--white)}
+.why-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(3rem,6vw,6rem);margin-top:3.5rem;align-items:start}
+.why-intro{font-size:1rem;color:var(--text-mid);line-height:1.9;max-width:34rem;margin-bottom:2.25rem}
+.why-list{margin:0}
+.why-row{display:grid;grid-template-columns:minmax(9rem,13rem) 1fr;gap:1.5rem;padding:1.15rem 0;border-top:1px solid var(--border)}
+.why-row:last-child{border-bottom:1px solid var(--border)}
+.why-row dt{font-family:var(--ff-serif);font-size:1.3rem;font-weight:400;color:var(--ink);line-height:1.25}
+.why-row dd{margin:0;font-size:0.92rem;color:var(--text-mid);line-height:1.75}
+.hf-title{font-family:var(--ff-serif);font-size:1.6rem;font-weight:300;color:var(--ink);margin-bottom:1rem}
+.hf-item{border-top:1px solid var(--border)}
+.hf-item:last-of-type{border-bottom:1px solid var(--border)}
+.hf-item summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:1.05rem 0;font-family:var(--ff-serif);font-size:1.2rem;color:var(--ink)}
+.hf-item summary::-webkit-details-marker{display:none}
+.hf-item summary::after{content:'+';font-family:var(--ff-mono);font-size:1rem;color:var(--gold);flex-shrink:0}
+.hf-item[open] summary::after{content:'2'}
+.hf-item summary:hover{color:var(--gold)}
+.hf-item p{margin:0 0 1.15rem;font-size:0.92rem;color:var(--text-mid);line-height:1.8;max-width:36rem}
+@media(max-width:900px){
+  .why-grid{grid-template-columns:1fr;gap:3rem;margin-top:2.25rem}
+  .why-row{grid-template-columns:1fr;gap:0.35rem}
+}
 </style>
 <script>
 document.addEventListener('DOMContentLoaded',function(){var n=document.getElementById('cnt-products');if(n){n.textContent=document.querySelectorAll('#products .pcard').length;}});

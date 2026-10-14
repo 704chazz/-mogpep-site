@@ -1610,6 +1610,28 @@ html{overflow-x:clip}
   .pdp-image-wrap{position:static}
   .pdp-info{min-width:0}
 }
+/* ── WHY MOGPEP + HOME FAQ ── */
+#why{background:var(--white)}
+.why-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(3rem,6vw,6rem);margin-top:3.5rem;align-items:start}
+.why-intro{font-size:1rem;color:var(--text-mid);line-height:1.9;max-width:34rem;margin-bottom:2.25rem}
+.why-list{margin:0}
+.why-row{display:grid;grid-template-columns:minmax(9rem,13rem) 1fr;gap:1.5rem;padding:1.15rem 0;border-top:1px solid var(--border)}
+.why-row:last-child{border-bottom:1px solid var(--border)}
+.why-row dt{font-family:var(--ff-serif);font-size:1.3rem;font-weight:400;color:var(--ink);line-height:1.25}
+.why-row dd{margin:0;font-size:0.92rem;color:var(--text-mid);line-height:1.75}
+.hf-title{font-family:var(--ff-serif);font-size:1.6rem;font-weight:300;color:var(--ink);margin-bottom:1rem}
+.hf-item{border-top:1px solid var(--border)}
+.hf-item:last-of-type{border-bottom:1px solid var(--border)}
+.hf-item summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:1.05rem 0;font-family:var(--ff-serif);font-size:1.2rem;color:var(--ink)}
+.hf-item summary::-webkit-details-marker{display:none}
+.hf-item summary::after{content:'+';font-family:var(--ff-mono);font-size:1rem;color:var(--gold);flex-shrink:0}
+.hf-item[open] summary::after{content:'2'}
+.hf-item summary:hover{color:var(--gold)}
+.hf-item p{margin:0 0 1.15rem;font-size:0.92rem;color:var(--text-mid);line-height:1.8;max-width:36rem}
+@media(max-width:900px){
+  .why-grid{grid-template-columns:1fr;gap:3rem;margin-top:2.25rem}
+  .why-row{grid-template-columns:1fr;gap:0.35rem}
+}
 </style>
 <script>
 document.addEventListener('DOMContentLoaded',function(){var n=document.getElementById('cnt-products');if(n){n.textContent=document.querySelectorAll('#products .pcard').length;}});
@@ -1669,8 +1691,8 @@ document.addEventListener('DOMContentLoaded',function(){var n=document.getElemen
 <section class="hero" id="home">
   <div class="hero-content">
     <h1 class="hero-headline au d1">Advancing<br><em>human</em><br>potential.</h1>
-    <p class="hero-tagline au d2">— Research Grade · Lab Verified · CoA Included</p>
-    <p class="hero-body au d2">Mogpep delivers pharmaceutical-grade research peptides synthesised to the highest purity standards. For researchers who demand nothing less than excellence.</p>
+    <p class="hero-tagline au d2">Research peptides, shipped Australia-wide</p>
+    <p class="hero-body au d2">Pharmaceutical-grade research peptides, independently tested and sent by Express Post. Order before 12pm AEST for same-day dispatch.</p>
     <div class="hero-actions au d3">
       <a href="#products" class="btn-ink">Explore Products</a>
       <a href="#quality" class="btn-ghost">Our Standards</a>
@@ -2003,6 +2025,33 @@ document.addEventListener('DOMContentLoaded',function(){var n=document.getElemen
         <img loading="lazy" decoding="async" src="/images/about-detail.jpg" alt="Close-up of Mogpep vials: MT2, BB10, Semax, MOTS-c and Tesamorelin" style="object-position:center center">
       </div>
       <div class="about-img-caption">Research Solutions</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY MOGPEP -->
+<section id="why">
+  <h2 class="s-title">Buy research peptides <em>online in Australia.</em></h2>
+  <div class="why-grid">
+    <div>
+      <p class="why-intro">Mogpep supplies lyophilised research peptides to labs and researchers across Australia, from GHK-Cu and CJC-1295 to Retatrutide, MOTS-c and Semax. Every vial is tested, every order ships express, and checkout takes a card in under a minute.</p>
+      <dl class="why-list">
+      <div class="why-row"><dt>Pay by card</dt><dd>All major credit and debit cards through a secure Stripe checkout.</dd></div>
+      <div class="why-row"><dt>Free express on 2+ vials</dt><dd>Every order travels by Express Post with tracking. Single vials ship for a flat $15.</dd></div>
+      <div class="why-row"><dt>Same-day dispatch</dt><dd>Order before 12pm AEST on a business day and it leaves the same day.</dd></div>
+      <div class="why-row"><dt>Independently tested</dt><dd>A Certificate of Analysis from an accredited third-party lab with every order.</dd></div>
+      <div class="why-row"><dt>Flat, honest pricing</dt><dd>Vials from $60. No inflated list prices, no countdown sales.</dd></div>
+      </dl>
+    </div>
+    <div class="home-faq">
+      <h3 class="hf-title">Common questions</h3>
+      <details class="hf-item"><summary>Do you ship Australia-wide?</summary><p>Yes. Every order goes by Australia Post Express with tracking. Sydney, Melbourne and Canberra are usually next business day; other capitals take 1–3 business days. We ship within Australia only.</p></details>
+      <details class="hf-item"><summary>How much is shipping?</summary><p>Free express shipping on orders of 2 or more vials. Single-vial orders pay a flat $15 for express.</p></details>
+      <details class="hf-item"><summary>How quickly do you dispatch?</summary><p>Orders placed before 12pm AEST on a business day are usually dispatched the same day. Later orders go out the next business day.</p></details>
+      <details class="hf-item"><summary>What payment methods do you accept?</summary><p>All major credit and debit cards, processed securely at checkout by Stripe.</p></details>
+      <details class="hf-item"><summary>Are your peptides tested?</summary><p>Yes. Every order comes with a Certificate of Analysis from an independent, accredited laboratory, confirming purity by RP-HPLC and identity by mass spectrometry.</p></details>
+      <details class="hf-item"><summary>Can I order in bulk?</summary><p>Yes. Email bulk@mogpep.com with the compounds and quantities you need and we will send a quote within 24 hours.</p></details>
+      <details class="hf-item"><summary>Are these products for human use?</summary><p>No. All Mogpep products are supplied strictly for in-vitro laboratory research. They are not for human or veterinary use and are not TGA-approved therapeutic goods.</p></details>
     </div>
   </div>
 </section>
