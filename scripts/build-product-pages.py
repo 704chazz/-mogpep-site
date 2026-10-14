@@ -80,7 +80,7 @@ for pid, r in rendered.items():
     title = f"{name} Research Peptide Australia | {p['sub']} | Mogpep"
     desc = (f"{p['name']} {p['dose']} ({p['sub']}) lyophilised research peptide, ${p['price']:g} AUD. "
             f"≥99% purity, CoA with every order, dispatched from Australia within 48h. Research use only.")
-    img = SITE + (r["img"] or "images/logo.png")
+    img = SITE + (r["img"] or "images/logo.png").lstrip("/")
 
     page = shell
     page = page.replace("<head>", f'<head>\n<base href="/">\n<script>window.MOGPEP_PAGE = {json.dumps(pid)};</script>', 1)
