@@ -22,7 +22,7 @@ const PRODUCTS = {
   klow80:      { name: 'KLOW80',       price: 16000 },
   motsc:       { name: 'MOTS-c',       price: 6000  },
   tesamorelin: { name: 'Tesamorelin',  price: 9000  },
-  semax:       { name: 'Semax',        price: 8000  },
+  semax:       { name: 'Semax',        price: 7000  },
 };
 
 exports.handler = async (event) => {
