@@ -178,7 +178,6 @@ section{padding:8rem 5rem}
 .product-note{margin-top:2rem;font-family:var(--ff-mono);font-size:0.75rem;letter-spacing:0.12em;color:var(--text-faint);text-align:center;padding-top:1.5rem;border-top:1px solid var(--border-soft)}
 
 /* ── QUALITY ── */
-#quality{background:var(--cream2)}
 .quality-grid{display:grid;grid-template-columns:1fr 1fr;gap:7rem;margin-top:5rem;align-items:start}
 .quality-img{aspect-ratio:4/5;overflow:hidden}
 .quality-img img{width:100%;height:100%;object-fit:contain;object-position:center center;background:var(--cream)}
@@ -2006,37 +2005,8 @@ document.addEventListener('DOMContentLoaded',function(){var n=document.getElemen
   <p class="product-note">All products for laboratory research use only · Batch numbers &amp; CoA available on request · mogpep.com/verify</p>
 </section>
 
-<!-- QUALITY -->
-<section id="quality">
-  <h2 class="s-title">The <em>Mogpep</em> standard.</h2>
-  <div class="quality-grid">
-    <div class="quality-img">
-      <img loading="lazy" decoding="async" src="/images/quality.jpg" alt="BPC-157 vial" style="width:100%;height:100%;object-fit:contain;object-position:center center;background:var(--cream)">
-    </div>
-    <div>
-      <div class="qf" onclick="toggleQF(this)">
-        <div class="qf-header"><span class="qf-num">01</span><h3 class="qf-title">Synthesis &amp; Manufacturing</h3><span class="qf-arrow">+</span></div>
-        <p class="qf-body">All peptides are synthesised using solid-phase peptide synthesis (SPPS) by our ISO-certified manufacturing partners. Strict process controls ensure batch-to-batch consistency and structural integrity of every compound.</p>
-      </div>
-      <div class="qf" onclick="toggleQF(this)">
-        <div class="qf-header"><span class="qf-num">02</span><h3 class="qf-title">HPLC Purity Analysis</h3><span class="qf-arrow">+</span></div>
-        <p class="qf-body">Every batch undergoes reverse-phase high-performance liquid chromatography (RP-HPLC) confirming purity of ≥99%. Only batches meeting this threshold are released for dispatch.</p>
-      </div>
-      <div class="qf" onclick="toggleQF(this)">
-        <div class="qf-header"><span class="qf-num">03</span><h3 class="qf-title">Mass Spectrometry Verification</h3><span class="qf-arrow">+</span></div>
-        <p class="qf-body">Mass spectrometry confirms the molecular weight and identity of each compound — ensuring what is on the label is precisely what is in the vial. No exceptions.</p>
-      </div>
-      <div class="qf" onclick="toggleQF(this)">
-        <div class="qf-header"><span class="qf-num">04</span><h3 class="qf-title">Certificate of Analysis</h3><span class="qf-arrow">+</span></div>
-        <p class="qf-body">A full CoA from an independent, accredited third-party laboratory is included with every order — purity data, mass spec confirmation, and batch-specific details. Scan the QR code on your vial at mogpep.com/verify.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
 <!-- TRUST -->
-<div class="trust-strip">
+<div class="trust-strip" id="quality">
   <div class="trust-grid">
     <div class="trust-cell"><div class="trust-icon">≥99%</div><p class="trust-t">Purity Guaranteed</p><p class="trust-b">All compounds verified to ≥99% purity via RP-HPLC before dispatch.</p></div>
     <div class="trust-cell"><div class="trust-icon">CoA</div><p class="trust-t">Third-Party Tested</p><p class="trust-b">Independent laboratory certificate of analysis included with every order.</p></div>
