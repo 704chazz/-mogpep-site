@@ -110,7 +110,6 @@ section{padding:8rem 5rem}
 .s-title{font-family:var(--ff-serif);font-size:clamp(2.8rem,4vw,4.5rem);font-weight:300;line-height:1.08;color:var(--ink)}
 .s-title em{font-style:italic;color:var(--gold-display)}
 
-#quality{background:var(--cream2)}
 /* ── ABOUT ── */
 #about{background:var(--cream)}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:7rem;align-items:center;margin-top:5rem}
@@ -1727,23 +1726,6 @@ document.addEventListener('DOMContentLoaded',function(){var n=document.getElemen
   </div>
 </div>
 
-<!-- ABOUT -->
-<section id="about">
-  <div class="about-grid">
-    <div>
-      <h2 class="s-title">Built for serious <em>research.</em></h2>
-      <p class="about-body">Mogpep was founded on a single conviction: researchers deserve peptides that perform exactly as specified. Every compound we supply is synthesised under strict quality controls, independently verified, and delivered with a full certificate of analysis.</p>
-      <p class="about-body">We work exclusively with ISO-certified manufacturing partners and subject every batch to HPLC and mass spectrometry testing before it reaches your lab.</p>
-    </div>
-    <div style="position:relative">
-      <div class="about-img-frame" style="aspect-ratio:16/9">
-        <img loading="lazy" decoding="async" src="/images/about-detail.jpg" alt="Close-up of Mogpep vials: MT2, BB10, Semax, MOTS-c and Tesamorelin" style="object-position:center center">
-      </div>
-      <div class="about-img-caption">Research Solutions</div>
-    </div>
-  </div>
-</section>
-
 <!-- PRODUCTS -->
 <section id="products">
   <div class="products-header">
@@ -2006,37 +1988,25 @@ document.addEventListener('DOMContentLoaded',function(){var n=document.getElemen
   <p class="product-note">All products for laboratory research use only · Batch numbers &amp; CoA available on request · mogpep.com/verify</p>
 </section>
 
-<!-- QUALITY -->
-<section id="quality">
-  <h2 class="s-title">The <em>Mogpep</em> standard.</h2>
-  <div class="quality-grid">
-    <div class="quality-img">
-      <img loading="lazy" decoding="async" src="/images/quality.jpg" alt="BPC-157 vial" style="width:100%;height:100%;object-fit:contain;object-position:center center;background:var(--cream)">
-    </div>
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
     <div>
-      <div class="qf" onclick="toggleQF(this)">
-        <div class="qf-header"><span class="qf-num">01</span><h3 class="qf-title">Synthesis &amp; Manufacturing</h3><span class="qf-arrow">+</span></div>
-        <p class="qf-body">All peptides are synthesised using solid-phase peptide synthesis (SPPS) by our ISO-certified manufacturing partners. Strict process controls ensure batch-to-batch consistency and structural integrity of every compound.</p>
+      <h2 class="s-title">Built for serious <em>research.</em></h2>
+      <p class="about-body">Mogpep was founded on a single conviction: researchers deserve peptides that perform exactly as specified. Every compound we supply is synthesised under strict quality controls, independently verified, and delivered with a full certificate of analysis.</p>
+      <p class="about-body">We work exclusively with ISO-certified manufacturing partners and subject every batch to HPLC and mass spectrometry testing before it reaches your lab.</p>
+    </div>
+    <div style="position:relative">
+      <div class="about-img-frame" style="aspect-ratio:16/9">
+        <img loading="lazy" decoding="async" src="/images/about-detail.jpg" alt="Close-up of Mogpep vials: MT2, BB10, Semax, MOTS-c and Tesamorelin" style="object-position:center center">
       </div>
-      <div class="qf" onclick="toggleQF(this)">
-        <div class="qf-header"><span class="qf-num">02</span><h3 class="qf-title">HPLC Purity Analysis</h3><span class="qf-arrow">+</span></div>
-        <p class="qf-body">Every batch undergoes reverse-phase high-performance liquid chromatography (RP-HPLC) confirming purity of ≥99%. Only batches meeting this threshold are released for dispatch.</p>
-      </div>
-      <div class="qf" onclick="toggleQF(this)">
-        <div class="qf-header"><span class="qf-num">03</span><h3 class="qf-title">Mass Spectrometry Verification</h3><span class="qf-arrow">+</span></div>
-        <p class="qf-body">Mass spectrometry confirms the molecular weight and identity of each compound — ensuring what is on the label is precisely what is in the vial. No exceptions.</p>
-      </div>
-      <div class="qf" onclick="toggleQF(this)">
-        <div class="qf-header"><span class="qf-num">04</span><h3 class="qf-title">Certificate of Analysis</h3><span class="qf-arrow">+</span></div>
-        <p class="qf-body">A full CoA from an independent, accredited third-party laboratory is included with every order — purity data, mass spec confirmation, and batch-specific details. Scan the QR code on your vial at mogpep.com/verify.</p>
-      </div>
-
+      <div class="about-img-caption">Research Solutions</div>
     </div>
   </div>
 </section>
 
 <!-- TRUST -->
-<div class="trust-strip">
+<div class="trust-strip" id="quality">
   <div class="trust-grid">
     <div class="trust-cell"><div class="trust-icon">≥99%</div><p class="trust-t">Purity Guaranteed</p><p class="trust-b">All compounds verified to ≥99% purity via RP-HPLC before dispatch.</p></div>
     <div class="trust-cell"><div class="trust-icon">CoA</div><p class="trust-t">Third-Party Tested</p><p class="trust-b">Independent laboratory certificate of analysis included with every order.</p></div>
