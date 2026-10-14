@@ -1576,6 +1576,39 @@ html{overflow-x:clip}
   ]
 }
   </script>
+
+<style>
+/* ── REFINE: hero with product lineup ── */
+.hero{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);align-items:center;gap:clamp(2rem,4vw,4.5rem);
+  padding:clamp(8rem,13vh,10rem) 5rem 4rem;min-height:100vh;justify-content:stretch}
+.hero-content{padding:0;margin:0;max-width:560px;text-align:left}
+.hero-headline{font-size:clamp(3.5rem,5.8vw,6rem);letter-spacing:-0.015em;text-wrap:balance}
+.hero-body{max-width:440px}
+.hero-actions{justify-content:flex-start}
+.hero-figure{margin:0;position:relative}
+.hero-figure img{display:block;width:100%;height:auto;mix-blend-mode:multiply;
+  -webkit-mask-image:linear-gradient(to right,transparent 0,#000 9%,#000 94%,transparent 100%),linear-gradient(to bottom,#000 80%,transparent 100%);
+  -webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent 0,#000 9%,#000 94%,transparent 100%),linear-gradient(to bottom,#000 80%,transparent 100%);mask-composite:intersect}
+/* ── REFINE: one stats strip, one trust strip ── */
+.counter-strip{grid-template-columns:repeat(3,minmax(0,1fr))}
+.trust-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+/* ── REFINE: calmer product cards (full specs stay on the product page) ── */
+.pcard-seq,.pcard-specs{display:none}
+.pcard-detail{font-size:0.82rem;margin-bottom:1.1rem}
+.pcard-name{margin-bottom:0.5rem}
+.pcard-price{font-size:1.55rem}
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;min-height:auto;padding:8rem 1.25rem 3rem;gap:2.5rem;align-items:start}
+  .hero-content{max-width:none}
+  .hero-actions{align-items:stretch}
+  .hero-figure{margin:0 -1.25rem}
+  .counter-strip{grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+  .trust-grid{grid-template-columns:1fr}
+}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded',function(){var n=document.getElementById('cnt-products');if(n){n.textContent=document.querySelectorAll('#products .pcard').length;}});
+</script>
 </head>
 <body>
 
@@ -1638,6 +1671,9 @@ html{overflow-x:clip}
       <a href="#quality" class="btn-ghost">Our Standards</a>
     </div>
   </div>
+  <figure class="hero-figure au d2">
+    <img src="images/hero-lineup.jpg" alt="The Mogpep range of research peptide vials, including Retatrutide, KLOW80, CJC-1295, GHK-Cu, Ipamorelin, GT1500, MT2, BB10, Semax, MOTS-c and Tesamorelin" width="1060" height="860" fetchpriority="high">
+  </figure>
 </section>
 
 <!-- MARQUEE -->
@@ -1678,11 +1714,7 @@ html{overflow-x:clip}
     <div class="counter-label">Orders Shipped</div>
   </div>
   <div class="counter-item">
-    <div class="counter-num" id="cnt-purity">≥99%</div>
-    <div class="counter-label">Purity Guaranteed</div>
-  </div>
-  <div class="counter-item">
-    <div class="counter-num" id="cnt-products">9</div>
+    <div class="counter-num" id="cnt-products">11</div>
     <div class="counter-label">Research Compounds</div>
   </div>
   <div class="counter-item">
@@ -1698,16 +1730,10 @@ html{overflow-x:clip}
       <h2 class="s-title">Built for serious <em>research.</em></h2>
       <p class="about-body">Mogpep was founded on a single conviction: researchers deserve peptides that perform exactly as specified. Every compound we supply is synthesised under strict quality controls, independently verified, and delivered with a full certificate of analysis.</p>
       <p class="about-body">We work exclusively with ISO-certified manufacturing partners and subject every batch to HPLC and mass spectrometry testing before it reaches your lab.</p>
-      <div class="about-stats">
-        <div class="stat-block"><div class="stat-num">≥99%</div><div class="stat-lbl">Purity Standard</div></div>
-        <div class="stat-block"><div class="stat-num">48h</div><div class="stat-lbl">Dispatch Time</div></div>
-        <div class="stat-block"><div class="stat-num">CoA</div><div class="stat-lbl">With Every Order</div></div>
-        <div class="stat-block"><div class="stat-num">ISO</div><div class="stat-lbl">Certified Synthesis</div></div>
-      </div>
     </div>
     <div style="position:relative">
       <div class="about-img-frame" style="aspect-ratio:16/9">
-        <img loading="lazy" decoding="async" src="images/lineup.jpg" alt="Mogpep full research peptide lineup" style="object-position:center center">
+        <img loading="lazy" decoding="async" src="images/about-detail.jpg" alt="Close-up of Mogpep vials: MT2, BB10, Semax, MOTS-c and Tesamorelin" style="object-position:center center">
       </div>
       <div class="about-img-caption">Research Solutions</div>
     </div>
@@ -2010,7 +2036,6 @@ html{overflow-x:clip}
   <div class="trust-grid">
     <div class="trust-cell"><div class="trust-icon">≥99%</div><p class="trust-t">Purity Guaranteed</p><p class="trust-b">All compounds verified to ≥99% purity via RP-HPLC before dispatch.</p></div>
     <div class="trust-cell"><div class="trust-icon">CoA</div><p class="trust-t">Third-Party Tested</p><p class="trust-b">Independent laboratory certificate of analysis included with every order.</p></div>
-    
     <div class="trust-cell"><div class="trust-icon">ISO</div><p class="trust-t">Certified Synthesis</p><p class="trust-b">Manufactured by ISO-certified partners using validated SPPS protocols.</p></div>
   </div>
 </div>
