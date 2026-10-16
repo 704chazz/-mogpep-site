@@ -1213,366 +1213,726 @@ html{overflow-x:clip}
   <!-- Structured Data -->
   <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://mogpep.com/#organization",
-      "name": "Mogpep Research Solutions",
-      "url": "https://mogpep.com/",
-      "logo": "https://mogpep.com/images/logo.png",
-      "description": "Supplier of premium lyophilised research peptides to Australian scientists and research institutions.",
-      "areaServed": {
-        "@type": "Country",
-        "name": "Australia"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "AU"
-      }
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://mogpep.com/#website",
-      "url": "https://mogpep.com/",
-      "name": "Mogpep",
-      "publisher": {
-        "@id": "https://mogpep.com/#organization"
-      }
-    },
-    {
-      "@type": "Product",
-      "name": "GHK-CU",
-      "description": "GHK-Cu is a naturally occurring copper peptide complex found in human plasma, saliva, and urine. It consists of the tripeptide glycyl-L-histidyl-L-lysine complexed with a copper (II) ion.",
-      "sku": "ghkcu",
-      "brand": {
-        "@type": "Brand",
-        "name": "Mogpep"
-      },
-      "image": "https://mogpep.com/images/ghkcu.jpg",
-      "offers": {
-        "@type": "Offer",
-        "url": "https://mogpep.com/",
-        "priceCurrency": "AUD",
-        "price": 90,
-        "availability": "https://schema.org/InStock",
-        "seller": {
-          "@id": "https://mogpep.com/#organization"
-        }
-      }
-    },
-    {
-      "@type": "Product",
-      "name": "GT1500",
-      "description": "GT1500 is a high-dose lyophilized compound formulation studied for its antioxidant properties and role in cellular protection against oxidative stress in research settings.",
-      "sku": "gt1500",
-      "brand": {
-        "@type": "Brand",
-        "name": "Mogpep"
-      },
-      "image": "https://mogpep.com/images/gt1500.jpg",
-      "offers": {
-        "@type": "Offer",
-        "url": "https://mogpep.com/",
-        "priceCurrency": "AUD",
-        "price": 80,
-        "availability": "https://schema.org/OutOfStock",
-        "seller": {
-          "@id": "https://mogpep.com/#organization"
-        }
-      }
-    },
-    {
-      "@type": "Product",
-      "name": "CJC-1295",
-      "description": "CJC-1295 (With DAC) is a synthetic analogue of growth hormone-releasing hormone (GHRH). The \"With DAC\" form carries a Drug Affinity Complex that binds serum albumin, giving it a much longer half-life than the no-DAC version.",
-      "sku": "cjc1295",
-      "brand": {
-        "@type": "Brand",
-        "name": "Mogpep"
-      },
-      "image": "https://mogpep.com/images/cjc1295.jpg",
-      "offers": {
-        "@type": "Offer",
-        "url": "https://mogpep.com/",
-        "priceCurrency": "AUD",
-        "price": 90,
-        "availability": "https://schema.org/InStock",
-        "seller": {
-          "@id": "https://mogpep.com/#organization"
-        }
-      }
-    },
-    {
-      "@type": "Product",
-      "name": "Ipamorelin",
-      "description": "Ipamorelin is a selective growth hormone secretagogue and ghrelin receptor agonist. It is a pentapeptide that stimulates growth hormone release with high selectivity and minimal effect on cortisol or prolactin.",
-      "sku": "ipamorelin",
-      "brand": {
-        "@type": "Brand",
-        "name": "Mogpep"
-      },
-      "image": "https://mogpep.com/images/ipamorelin.jpg",
-      "offers": {
-        "@type": "Offer",
-        "url": "https://mogpep.com/",
-        "priceCurrency": "AUD",
-        "price": 90,
-        "availability": "https://schema.org/InStock",
-        "seller": {
-          "@id": "https://mogpep.com/#organization"
-        }
-      }
-    },
-    {
-      "@type": "Product",
-      "name": "BPC-157 + TB-500 (BB10)",
-      "description": "BB10 is Mogpep's signature research blend combining BPC-157 (5mg) and TB-500 (5mg) in a single lyophilised vial. Designed for researchers studying the combined effects of these two extensively researched peptides.",
-      "sku": "bb10",
-      "brand": {
-        "@type": "Brand",
-        "name": "Mogpep"
-      },
-      "image": "https://mogpep.com/images/bb10.jpg",
-      "offers": {
-        "@type": "Offer",
-        "url": "https://mogpep.com/",
-        "priceCurrency": "AUD",
-        "price": 110,
-        "availability": "https://schema.org/InStock",
-        "seller": {
-          "@id": "https://mogpep.com/#organization"
-        }
-      }
-    },
-    {
-      "@type": "Product",
-      "name": "Retatrutide",
-      "description": "Retatrutide is a single-peptide triple agonist of the GIP, GLP-1 and glucagon receptors. A fatty diacid side chain enables albumin binding, significantly extending its half-life for research applications.",
-      "sku": "retatrutide",
-      "brand": {
-        "@type": "Brand",
-        "name": "Mogpep"
-      },
-      "image": "https://mogpep.com/images/retatrutide.jpg",
-      "offers": {
-        "@type": "Offer",
-        "url": "https://mogpep.com/",
-        "priceCurrency": "AUD",
-        "price": 120,
-        "availability": "https://schema.org/InStock",
-        "seller": {
-          "@id": "https://mogpep.com/#organization"
-        }
-      }
-    },
-    {
-      "@type": "Product",
-      "name": "MT2",
-      "description": "MT2 (Melanotan 2) is a synthetic analogue of the naturally occurring peptide hormone alpha-melanocyte-stimulating hormone (\u03b1-MSH), studied for its melanogenic properties in research settings.",
-      "sku": "mt2",
-      "brand": {
-        "@type": "Brand",
-        "name": "Mogpep"
-      },
-      "image": "https://mogpep.com/images/mt2.jpg",
-      "offers": {
-        "@type": "Offer",
-        "url": "https://mogpep.com/",
-        "priceCurrency": "AUD",
-        "price": 60,
-        "availability": "https://schema.org/InStock",
-        "seller": {
-          "@id": "https://mogpep.com/#organization"
-        }
-      }
-    },
-    {
-      "@type": "Product",
-      "name": "KLOW80",
-      "description": "KLOW80 is a research peptide blend formulated for combined study of tissue repair and regenerative pathways in preclinical research.",
-      "sku": "klow80",
-      "brand": {
-        "@type": "Brand",
-        "name": "Mogpep"
-      },
-      "image": "https://mogpep.com/images/klow80.jpg",
-      "offers": {
-        "@type": "Offer",
-        "url": "https://mogpep.com/",
-        "priceCurrency": "AUD",
-        "price": 160,
-        "availability": "https://schema.org/InStock",
-        "seller": {
-          "@id": "https://mogpep.com/#organization"
-        }
-      }
-    },
-    {
-      "@type": "Product",
-      "name": "MOTS-c",
-      "description": "MOTS-c is a 16-amino-acid mitochondrial-derived peptide studied for its role in metabolic homeostasis and mitochondrial signalling in preclinical research.",
-      "sku": "motsc",
-      "image": "https://mogpep.com/images/motsc.jpg",
-      "brand": {
-        "@type": "Brand",
-        "name": "Mogpep"
-      },
-      "offers": {
-        "@type": "Offer",
-        "url": "https://mogpep.com/",
-        "priceCurrency": "AUD",
-        "price": 60,
-        "availability": "https://schema.org/InStock",
-        "seller": {
-          "@id": "https://mogpep.com/#organization"
-        }
-      }
-    },
-    {
-      "@type": "Product",
-      "name": "Tesamorelin",
-      "description": "Tesamorelin is a stabilised GHRH analogue studied in research on IGF-1 axis modulation, visceral adipose tissue, and lipid metabolism.",
-      "sku": "tesamorelin",
-      "image": "https://mogpep.com/images/tesamorelin.jpg",
-      "brand": {
-        "@type": "Brand",
-        "name": "Mogpep"
-      },
-      "offers": {
-        "@type": "Offer",
-        "url": "https://mogpep.com/",
-        "priceCurrency": "AUD",
-        "price": 90,
-        "availability": "https://schema.org/InStock",
-        "seller": {
-          "@id": "https://mogpep.com/#organization"
-        }
-      }
-    },
-    {
-      "@type": "Product",
-      "name": "Semax",
-      "description": "Semax is a synthetic nootropic heptapeptide derived from ACTH(4-10), studied for BDNF modulation and neuroprotective research.",
-      "sku": "semax",
-      "image": "https://mogpep.com/images/semax.jpg",
-      "brand": {
-        "@type": "Brand",
-        "name": "Mogpep"
-      },
-      "offers": {
-        "@type": "Offer",
-        "url": "https://mogpep.com/",
-        "priceCurrency": "AUD",
-        "price": 70,
-        "availability": "https://schema.org/InStock",
-        "seller": {
-          "@id": "https://mogpep.com/#organization"
-        }
-      }
-    },
-    {
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "How long does delivery take to my state?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "All orders are shipped via Australia Post Express or equivalent express courier. NSW, VIC, and ACT typically arrive next business day. QLD and SA typically arrive within 1-2 business days. WA, NT, and TAS typically arrive within 2-3 business days. Orders placed before 12pm AEST on business days are typically dispatched same day."
-                }
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Organization",
+            "@id": "https://mogpep.com/#organization",
+            "name": "Mogpep Research Solutions",
+            "url": "https://mogpep.com/",
+            "logo": "https://mogpep.com/images/logo.png",
+            "description": "Supplier of premium lyophilised research peptides to Australian scientists and research institutions.",
+            "areaServed": {
+                "@type": "Country",
+                "name": "Australia"
             },
-            {
-                "@type": "Question",
-                "name": "How much does shipping cost?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Orders of 2 or more vials qualify for free express shipping Australia-wide. Single vial orders are charged a flat rate express shipping fee at checkout. We do not offer standard (non-express) shipping \u2014 all orders are sent express to maintain product integrity."
-                }
+            "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "AU"
+            }
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://mogpep.com/#website",
+            "url": "https://mogpep.com/",
+            "name": "Mogpep",
+            "publisher": {
+                "@id": "https://mogpep.com/#organization"
+            }
+        },
+        {
+            "@type": "Product",
+            "name": "GHK-CU",
+            "description": "GHK-Cu is a naturally occurring copper peptide complex found in human plasma, saliva, and urine. It consists of the tripeptide glycyl-L-histidyl-L-lysine complexed with a copper (II) ion.",
+            "sku": "ghkcu",
+            "brand": {
+                "@type": "Brand",
+                "name": "Mogpep"
             },
-            {
-                "@type": "Question",
-                "name": "Do you ship internationally?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "No, Mogpep currently ships within Australia only. We do not accept international orders at this time."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Will I receive tracking for my order?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes, all orders are sent with full tracking. You will receive a tracking number via email once your order has been dispatched."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "What happens if I'm not home for delivery?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "If you are not available at the time of delivery, the courier will leave a card and the parcel will be taken to your nearest collection point or post office."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "How do I place an order?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Browse our product catalogue, add the compounds you need to your cart, and proceed to checkout. Payment is processed securely through Stripe."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "What payment methods do you accept?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "We accept all major credit and debit cards through our secure Stripe checkout."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Can I get a bulk or wholesale discount?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes, we offer pricing for bulk and wholesale orders. Contact us with the compounds and quantities you require for a custom quote within 24 hours."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "How do I verify the purity of my order?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Every Mogpep order includes a Certificate of Analysis (CoA) from an independent, accredited third-party laboratory, confirming purity via RP-HPLC and identity via mass spectrometry."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "How should I store my peptides?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Lyophilized (unreconstituted) peptides should be stored at -20\u00b0C in a sealed container, protected from light and moisture, and are stable for up to 24 months when stored correctly. After reconstitution, store at 2-8\u00b0C and use within 28 days. Do not refreeze after reconstitution."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "How do I reconstitute a lyophilized peptide?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Use bacteriostatic water or sterile water for injection. Add the solvent slowly down the inside wall of the vial rather than directly onto the powder, then gently swirl until fully dissolved. Always perform reconstitution under sterile conditions using appropriate lab technique."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Are these products for human use?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "No. All Mogpep products are strictly for in vitro laboratory research use only. They are not intended for human or veterinary consumption, clinical use, or any application outside a controlled research environment, and are not TGA-approved therapeutic goods."
+            "image": "https://mogpep.com/images/ghkcu.jpg",
+            "offers": {
+                "@type": "Offer",
+                "url": "https://mogpep.com/",
+                "priceCurrency": "AUD",
+                "price": 90,
+                "availability": "https://schema.org/InStock",
+                "seller": {
+                    "@id": "https://mogpep.com/#organization"
+                },
+                "shippingDetails": {
+                    "@type": "OfferShippingDetails",
+                    "shippingRate": {
+                        "@type": "MonetaryAmount",
+                        "value": 15,
+                        "currency": "AUD"
+                    },
+                    "shippingDestination": {
+                        "@type": "DefinedRegion",
+                        "addressCountry": "AU"
+                    },
+                    "deliveryTime": {
+                        "@type": "ShippingDeliveryTime",
+                        "handlingTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": 0,
+                            "maxValue": 1,
+                            "unitCode": "DAY"
+                        },
+                        "transitTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": 1,
+                            "maxValue": 3,
+                            "unitCode": "DAY"
+                        }
+                    }
+                },
+                "hasMerchantReturnPolicy": {
+                    "@type": "MerchantReturnPolicy",
+                    "applicableCountry": "AU",
+                    "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
                 }
             }
-        ]
-    }
-  ]
+        },
+        {
+            "@type": "Product",
+            "name": "GT1500",
+            "description": "GT1500 is a high-dose lyophilized compound formulation studied for its antioxidant properties and role in cellular protection against oxidative stress in research settings.",
+            "sku": "gt1500",
+            "brand": {
+                "@type": "Brand",
+                "name": "Mogpep"
+            },
+            "image": "https://mogpep.com/images/gt1500.jpg",
+            "offers": {
+                "@type": "Offer",
+                "url": "https://mogpep.com/",
+                "priceCurrency": "AUD",
+                "price": 80,
+                "availability": "https://schema.org/OutOfStock",
+                "seller": {
+                    "@id": "https://mogpep.com/#organization"
+                },
+                "shippingDetails": {
+                    "@type": "OfferShippingDetails",
+                    "shippingRate": {
+                        "@type": "MonetaryAmount",
+                        "value": 15,
+                        "currency": "AUD"
+                    },
+                    "shippingDestination": {
+                        "@type": "DefinedRegion",
+                        "addressCountry": "AU"
+                    },
+                    "deliveryTime": {
+                        "@type": "ShippingDeliveryTime",
+                        "handlingTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": 0,
+                            "maxValue": 1,
+                            "unitCode": "DAY"
+                        },
+                        "transitTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": 1,
+                            "maxValue": 3,
+                            "unitCode": "DAY"
+                        }
+                    }
+                },
+                "hasMerchantReturnPolicy": {
+                    "@type": "MerchantReturnPolicy",
+                    "applicableCountry": "AU",
+                    "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+                }
+            }
+        },
+        {
+            "@type": "Product",
+            "name": "CJC-1295",
+            "description": "CJC-1295 (With DAC) is a synthetic analogue of growth hormone-releasing hormone (GHRH). The \"With DAC\" form carries a Drug Affinity Complex that binds serum albumin, giving it a much longer half-life than the no-DAC version.",
+            "sku": "cjc1295",
+            "brand": {
+                "@type": "Brand",
+                "name": "Mogpep"
+            },
+            "image": "https://mogpep.com/images/cjc1295.jpg",
+            "offers": {
+                "@type": "Offer",
+                "url": "https://mogpep.com/",
+                "priceCurrency": "AUD",
+                "price": 90,
+                "availability": "https://schema.org/InStock",
+                "seller": {
+                    "@id": "https://mogpep.com/#organization"
+                },
+                "shippingDetails": {
+                    "@type": "OfferShippingDetails",
+                    "shippingRate": {
+                        "@type": "MonetaryAmount",
+                        "value": 15,
+                        "currency": "AUD"
+                    },
+                    "shippingDestination": {
+                        "@type": "DefinedRegion",
+                        "addressCountry": "AU"
+                    },
+                    "deliveryTime": {
+                        "@type": "ShippingDeliveryTime",
+                        "handlingTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": 0,
+                            "maxValue": 1,
+                            "unitCode": "DAY"
+                        },
+                        "transitTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": 1,
+                            "maxValue": 3,
+                            "unitCode": "DAY"
+                        }
+                    }
+                },
+                "hasMerchantReturnPolicy": {
+                    "@type": "MerchantReturnPolicy",
+                    "applicableCountry": "AU",
+                    "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+                }
+            }
+        },
+        {
+            "@type": "Product",
+            "name": "Ipamorelin",
+            "description": "Ipamorelin is a selective growth hormone secretagogue and ghrelin receptor agonist. It is a pentapeptide that stimulates growth hormone release with high selectivity and minimal effect on cortisol or prolactin.",
+            "sku": "ipamorelin",
+            "brand": {
+                "@type": "Brand",
+                "name": "Mogpep"
+            },
+            "image": "https://mogpep.com/images/ipamorelin.jpg",
+            "offers": {
+                "@type": "Offer",
+                "url": "https://mogpep.com/",
+                "priceCurrency": "AUD",
+                "price": 90,
+                "availability": "https://schema.org/InStock",
+                "seller": {
+                    "@id": "https://mogpep.com/#organization"
+                },
+                "shippingDetails": {
+                    "@type": "OfferShippingDetails",
+                    "shippingRate": {
+                        "@type": "MonetaryAmount",
+                        "value": 15,
+                        "currency": "AUD"
+                    },
+                    "shippingDestination": {
+                        "@type": "DefinedRegion",
+                        "addressCountry": "AU"
+                    },
+                    "deliveryTime": {
+                        "@type": "ShippingDeliveryTime",
+                        "handlingTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": 0,
+                            "maxValue": 1,
+                            "unitCode": "DAY"
+                        },
+                        "transitTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": 1,
+                            "maxValue": 3,
+                            "unitCode": "DAY"
+                        }
+                    }
+                },
+                "hasMerchantReturnPolicy": {
+                    "@type": "MerchantReturnPolicy",
+                    "applicableCountry": "AU",
+                    "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+                }
+            }
+        },
+        {
+            "@type": "Product",
+            "name": "BPC-157 + TB-500 (BB10)",
+            "description": "BB10 is Mogpep's signature research blend combining BPC-157 (5mg) and TB-500 (5mg) in a single lyophilised vial. Designed for researchers studying the combined effects of these two extensively researched peptides.",
+            "sku": "bb10",
+            "brand": {
+                "@type": "Brand",
+                "name": "Mogpep"
+            },
+            "image": "https://mogpep.com/images/bb10.jpg",
+            "offers": {
+                "@type": "Offer",
+                "url": "https://mogpep.com/",
+                "priceCurrency": "AUD",
+                "price": 110,
+                "availability": "https://schema.org/InStock",
+                "seller": {
+                    "@id": "https://mogpep.com/#organization"
+                },
+                "shippingDetails": {
+                    "@type": "OfferShippingDetails",
+                    "shippingRate": {
+                        "@type": "MonetaryAmount",
+                        "value": 15,
+                        "currency": "AUD"
+                    },
+                    "shippingDestination": {
+                        "@type": "DefinedRegion",
+                        "addressCountry": "AU"
+                    },
+                    "deliveryTime": {
+                        "@type": "ShippingDeliveryTime",
+                        "handlingTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": 0,
+                            "maxValue": 1,
+                            "unitCode": "DAY"
+                        },
+                        "transitTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": 1,
+                            "maxValue": 3,
+                            "unitCode": "DAY"
+                        }
+                    }
+                },
+                "hasMerchantReturnPolicy": {
+                    "@type": "MerchantReturnPolicy",
+                    "applicableCountry": "AU",
+                    "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+                }
+            }
+        },
+        {
+            "@type": "Product",
+            "name": "Retatrutide",
+            "description": "Retatrutide is a single-peptide triple agonist of the GIP, GLP-1 and glucagon receptors. A fatty diacid side chain enables albumin binding, significantly extending its half-life for research applications.",
+            "sku": "retatrutide",
+            "brand": {
+                "@type": "Brand",
+                "name": "Mogpep"
+            },
+            "image": "https://mogpep.com/images/retatrutide.jpg",
+            "offers": {
+                "@type": "Offer",
+                "url": "https://mogpep.com/",
+                "priceCurrency": "AUD",
+                "price": 120,
+                "availability": "https://schema.org/InStock",
+                "seller": {
+                    "@id": "https://mogpep.com/#organization"
+                },
+                "shippingDetails": {
+                    "@type": "OfferShippingDetails",
+                    "shippingRate": {
+                        "@type": "MonetaryAmount",
+                        "value": 15,
+                        "currency": "AUD"
+                    },
+                    "shippingDestination": {
+                        "@type": "DefinedRegion",
+                        "addressCountry": "AU"
+                    },
+                    "deliveryTime": {
+                        "@type": "ShippingDeliveryTime",
+                        "handlingTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": 0,
+                            "maxValue": 1,
+                            "unitCode": "DAY"
+                        },
+                        "transitTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": 1,
+                            "maxValue": 3,
+                            "unitCode": "DAY"
+                        }
+                    }
+                },
+                "hasMerchantReturnPolicy": {
+                    "@type": "MerchantReturnPolicy",
+                    "applicableCountry": "AU",
+                    "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+                }
+            }
+        },
+        {
+            "@type": "Product",
+            "name": "MT2",
+            "description": "MT2 (Melanotan 2) is a synthetic analogue of the naturally occurring peptide hormone alpha-melanocyte-stimulating hormone (α-MSH), studied for its melanogenic properties in research settings.",
+            "sku": "mt2",
+            "brand": {
+                "@type": "Brand",
+                "name": "Mogpep"
+            },
+            "image": "https://mogpep.com/images/mt2.jpg",
+            "offers": {
+                "@type": "Offer",
+                "url": "https://mogpep.com/",
+                "priceCurrency": "AUD",
+                "price": 60,
+                "availability": "https://schema.org/InStock",
+                "seller": {
+                    "@id": "https://mogpep.com/#organization"
+                },
+                "shippingDetails": {
+                    "@type": "OfferShippingDetails",
+                    "shippingRate": {
+                        "@type": "MonetaryAmount",
+                        "value": 15,
+                        "currency": "AUD"
+                    },
+                    "shippingDestination": {
+                        "@type": "DefinedRegion",
+                        "addressCountry": "AU"
+                    },
+                    "deliveryTime": {
+                        "@type": "ShippingDeliveryTime",
+                        "handlingTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": 0,
+                            "maxValue": 1,
+                            "unitCode": "DAY"
+                        },
+                        "transitTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": 1,
+                            "maxValue": 3,
+                            "unitCode": "DAY"
+                        }
+                    }
+                },
+                "hasMerchantReturnPolicy": {
+                    "@type": "MerchantReturnPolicy",
+                    "applicableCountry": "AU",
+                    "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+                }
+            }
+        },
+        {
+            "@type": "Product",
+            "name": "KLOW80",
+            "description": "KLOW80 is a research peptide blend formulated for combined study of tissue repair and regenerative pathways in preclinical research.",
+            "sku": "klow80",
+            "brand": {
+                "@type": "Brand",
+                "name": "Mogpep"
+            },
+            "image": "https://mogpep.com/images/klow80.jpg",
+            "offers": {
+                "@type": "Offer",
+                "url": "https://mogpep.com/",
+                "priceCurrency": "AUD",
+                "price": 160,
+                "availability": "https://schema.org/InStock",
+                "seller": {
+                    "@id": "https://mogpep.com/#organization"
+                },
+                "shippingDetails": {
+                    "@type": "OfferShippingDetails",
+                    "shippingRate": {
+                        "@type": "MonetaryAmount",
+                        "value": 15,
+                        "currency": "AUD"
+                    },
+                    "shippingDestination": {
+                        "@type": "DefinedRegion",
+                        "addressCountry": "AU"
+                    },
+                    "deliveryTime": {
+                        "@type": "ShippingDeliveryTime",
+                        "handlingTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": 0,
+                            "maxValue": 1,
+                            "unitCode": "DAY"
+                        },
+                        "transitTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": 1,
+                            "maxValue": 3,
+                            "unitCode": "DAY"
+                        }
+                    }
+                },
+                "hasMerchantReturnPolicy": {
+                    "@type": "MerchantReturnPolicy",
+                    "applicableCountry": "AU",
+                    "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+                }
+            }
+        },
+        {
+            "@type": "Product",
+            "name": "MOTS-c",
+            "description": "MOTS-c is a 16-amino-acid mitochondrial-derived peptide studied for its role in metabolic homeostasis and mitochondrial signalling in preclinical research.",
+            "sku": "motsc",
+            "image": "https://mogpep.com/images/motsc.jpg",
+            "brand": {
+                "@type": "Brand",
+                "name": "Mogpep"
+            },
+            "offers": {
+                "@type": "Offer",
+                "url": "https://mogpep.com/",
+                "priceCurrency": "AUD",
+                "price": 60,
+                "availability": "https://schema.org/InStock",
+                "seller": {
+                    "@id": "https://mogpep.com/#organization"
+                },
+                "shippingDetails": {
+                    "@type": "OfferShippingDetails",
+                    "shippingRate": {
+                        "@type": "MonetaryAmount",
+                        "value": 15,
+                        "currency": "AUD"
+                    },
+                    "shippingDestination": {
+                        "@type": "DefinedRegion",
+                        "addressCountry": "AU"
+                    },
+                    "deliveryTime": {
+                        "@type": "ShippingDeliveryTime",
+                        "handlingTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": 0,
+                            "maxValue": 1,
+                            "unitCode": "DAY"
+                        },
+                        "transitTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": 1,
+                            "maxValue": 3,
+                            "unitCode": "DAY"
+                        }
+                    }
+                },
+                "hasMerchantReturnPolicy": {
+                    "@type": "MerchantReturnPolicy",
+                    "applicableCountry": "AU",
+                    "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+                }
+            }
+        },
+        {
+            "@type": "Product",
+            "name": "Tesamorelin",
+            "description": "Tesamorelin is a stabilised GHRH analogue studied in research on IGF-1 axis modulation, visceral adipose tissue, and lipid metabolism.",
+            "sku": "tesamorelin",
+            "image": "https://mogpep.com/images/tesamorelin.jpg",
+            "brand": {
+                "@type": "Brand",
+                "name": "Mogpep"
+            },
+            "offers": {
+                "@type": "Offer",
+                "url": "https://mogpep.com/",
+                "priceCurrency": "AUD",
+                "price": 90,
+                "availability": "https://schema.org/InStock",
+                "seller": {
+                    "@id": "https://mogpep.com/#organization"
+                },
+                "shippingDetails": {
+                    "@type": "OfferShippingDetails",
+                    "shippingRate": {
+                        "@type": "MonetaryAmount",
+                        "value": 15,
+                        "currency": "AUD"
+                    },
+                    "shippingDestination": {
+                        "@type": "DefinedRegion",
+                        "addressCountry": "AU"
+                    },
+                    "deliveryTime": {
+                        "@type": "ShippingDeliveryTime",
+                        "handlingTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": 0,
+                            "maxValue": 1,
+                            "unitCode": "DAY"
+                        },
+                        "transitTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": 1,
+                            "maxValue": 3,
+                            "unitCode": "DAY"
+                        }
+                    }
+                },
+                "hasMerchantReturnPolicy": {
+                    "@type": "MerchantReturnPolicy",
+                    "applicableCountry": "AU",
+                    "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+                }
+            }
+        },
+        {
+            "@type": "Product",
+            "name": "Semax",
+            "description": "Semax is a synthetic nootropic heptapeptide derived from ACTH(4-10), studied for BDNF modulation and neuroprotective research.",
+            "sku": "semax",
+            "image": "https://mogpep.com/images/semax.jpg",
+            "brand": {
+                "@type": "Brand",
+                "name": "Mogpep"
+            },
+            "offers": {
+                "@type": "Offer",
+                "url": "https://mogpep.com/",
+                "priceCurrency": "AUD",
+                "price": 70,
+                "availability": "https://schema.org/InStock",
+                "seller": {
+                    "@id": "https://mogpep.com/#organization"
+                },
+                "shippingDetails": {
+                    "@type": "OfferShippingDetails",
+                    "shippingRate": {
+                        "@type": "MonetaryAmount",
+                        "value": 15,
+                        "currency": "AUD"
+                    },
+                    "shippingDestination": {
+                        "@type": "DefinedRegion",
+                        "addressCountry": "AU"
+                    },
+                    "deliveryTime": {
+                        "@type": "ShippingDeliveryTime",
+                        "handlingTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": 0,
+                            "maxValue": 1,
+                            "unitCode": "DAY"
+                        },
+                        "transitTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": 1,
+                            "maxValue": 3,
+                            "unitCode": "DAY"
+                        }
+                    }
+                },
+                "hasMerchantReturnPolicy": {
+                    "@type": "MerchantReturnPolicy",
+                    "applicableCountry": "AU",
+                    "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+                }
+            }
+        },
+        {
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "How long does delivery take to my state?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "All orders are shipped via Australia Post Express or equivalent express courier. NSW, VIC, and ACT typically arrive next business day. QLD and SA typically arrive within 1-2 business days. WA, NT, and TAS typically arrive within 2-3 business days. Orders placed before 12pm AEST on business days are typically dispatched same day."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How much does shipping cost?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Orders of 2 or more vials qualify for free express shipping Australia-wide. Single vial orders are charged a flat rate express shipping fee at checkout. We do not offer standard (non-express) shipping — all orders are sent express to maintain product integrity."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Do you ship internationally?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "No, Mogpep currently ships within Australia only. We do not accept international orders at this time."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Will I receive tracking for my order?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes, all orders are sent with full tracking. You will receive a tracking number via email once your order has been dispatched."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What happens if I'm not home for delivery?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "If you are not available at the time of delivery, the courier will leave a card and the parcel will be taken to your nearest collection point or post office."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How do I place an order?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Browse our product catalogue, add the compounds you need to your cart, and proceed to checkout. Payment is processed securely through Stripe."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What payment methods do you accept?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "We accept all major credit and debit cards through our secure Stripe checkout."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can I get a bulk or wholesale discount?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes, we offer pricing for bulk and wholesale orders. Contact us with the compounds and quantities you require for a custom quote within 24 hours."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How do I verify the purity of my order?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Every Mogpep order includes a Certificate of Analysis (CoA) from an independent, accredited third-party laboratory, confirming purity via RP-HPLC and identity via mass spectrometry."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How should I store my peptides?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Lyophilized (unreconstituted) peptides should be stored at -20°C in a sealed container, protected from light and moisture, and are stable for up to 24 months when stored correctly. After reconstitution, store at 2-8°C and use within 28 days. Do not refreeze after reconstitution."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How do I reconstitute a lyophilized peptide?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Use bacteriostatic water or sterile water for injection. Add the solvent slowly down the inside wall of the vial rather than directly onto the powder, then gently swirl until fully dissolved. Always perform reconstitution under sterile conditions using appropriate lab technique."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Are these products for human use?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "No. All Mogpep products are strictly for in vitro laboratory research use only. They are not intended for human or veterinary consumption, clinical use, or any application outside a controlled research environment, and are not TGA-approved therapeutic goods."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can I return my order?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Because these are sealed research products, we can't accept returns or exchanges for change of mind. If your order arrives damaged or you receive the wrong item, email research@mogpep.com within 7 days of delivery with your order number and a photo, and we'll replace or refund it."
+                    }
+                }
+            ]
+        }
+    ]
 }
   </script>
 
@@ -2050,6 +2410,7 @@ document.addEventListener('DOMContentLoaded',function(){var n=document.getElemen
       <details class="hf-item"><summary>What payment methods do you accept?</summary><p>All major credit and debit cards, processed securely at checkout by Stripe.</p></details>
       <details class="hf-item"><summary>Are your peptides tested?</summary><p>Yes. Every order comes with a Certificate of Analysis from an independent, accredited laboratory, confirming purity by RP-HPLC and identity by mass spectrometry.</p></details>
       <details class="hf-item"><summary>Can I order in bulk?</summary><p>Yes. Email bulk@mogpep.com with the compounds and quantities you need and we will send a quote within 24 hours.</p></details>
+      <details class="hf-item"><summary>Can I return my order?</summary><p>Because these are sealed research products, we can't accept returns or exchanges for change of mind. If your order arrives damaged or you receive the wrong item, email research@mogpep.com within 7 days of delivery with your order number and a photo, and we'll replace or refund it.</p></details>
       <details class="hf-item"><summary>Are these products for human use?</summary><p>No. All Mogpep products are supplied strictly for in-vitro laboratory research. They are not for human or veterinary use and are not TGA-approved therapeutic goods.</p></details>
     </div>
   </div>
@@ -3000,6 +3361,15 @@ window.addEventListener('DOMContentLoaded', () => {
         </div>
         <div class="faq-a">
           Yes — we offer pricing for bulk and wholesale orders. Please contact us at bulk@mogpep.com with the compounds and quantities you require and we will provide a custom quote within 24 hours.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-header" onclick="toggleFAQ(this)">
+          <p class="faq-q">Can I return my order?</p>
+          <span class="faq-arrow">+</span>
+        </div>
+        <div class="faq-a">
+          Because these are sealed research products, we can't accept returns or exchanges for change of mind. If your order arrives damaged or you receive the wrong item, email research@mogpep.com within 7 days of delivery with your order number and a photo, and we'll replace or refund it.
         </div>
       </div>
     </div>

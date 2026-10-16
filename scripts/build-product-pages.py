@@ -17,6 +17,10 @@ from html import escape
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://mogpep.com/"
+# Flat $15 express (free on 2+ vials), dispatched within a business day, 1-3 days transit, Australia only.
+SHIPPING = {"@type": "OfferShippingDetails", "shippingRate": {"@type": "MonetaryAmount", "value": 15, "currency": "AUD"}, "shippingDestination": {"@type": "DefinedRegion", "addressCountry": "AU"}, "deliveryTime": {"@type": "ShippingDeliveryTime", "handlingTime": {"@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY"}, "transitTime": {"@type": "QuantitativeValue", "minValue": 1, "maxValue": 3, "unitCode": "DAY"}}}
+# No change-of-mind returns; damaged/wrong items replaced or refunded (see FAQ).
+RETURNS = {"@type": "MerchantReturnPolicy", "applicableCountry": "AU", "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"}
 src = open(os.path.join(ROOT, "index.html"), encoding="utf-8").read()
 
 
@@ -100,7 +104,8 @@ for pid, r in rendered.items():
          "description": p["description"], "image": img, "brand": {"@type": "Brand", "name": "Mogpep"},
          "offers": {"@type": "Offer", "url": url, "priceCurrency": "AUD", "price": p["price"],
                     "availability": "https://schema.org/" + ("OutOfStock" if r.get("stock") == "out" else "InStock"),
-                    "seller": {"@type": "Organization", "name": "Mogpep Research Solutions", "url": SITE}}},
+                    "seller": {"@type": "Organization", "name": "Mogpep Research Solutions", "url": SITE},
+                    "shippingDetails": SHIPPING, "hasMerchantReturnPolicy": RETURNS}},
         {"@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE},
             {"@type": "ListItem", "position": 2, "name": "Research Peptides", "item": SITE + "#products"},

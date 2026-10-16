@@ -1238,6 +1238,38 @@ html{overflow-x:clip}
           "@type": "Organization",
           "name": "Mogpep Research Solutions",
           "url": "https://mogpep.com/"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": 15,
+            "currency": "AUD"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "AU"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 1,
+              "maxValue": 3,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "AU",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
         }
       }
     },
@@ -2444,6 +2476,15 @@ window.addEventListener('DOMContentLoaded', () => {
         </div>
         <div class="faq-a">
           Yes — we offer pricing for bulk and wholesale orders. Please contact us at bulk@mogpep.com with the compounds and quantities you require and we will provide a custom quote within 24 hours.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-header" onclick="toggleFAQ(this)">
+          <p class="faq-q">Can I return my order?</p>
+          <span class="faq-arrow">+</span>
+        </div>
+        <div class="faq-a">
+          Because these are sealed research products, we can't accept returns or exchanges for change of mind. If your order arrives damaged or you receive the wrong item, email research@mogpep.com within 7 days of delivery with your order number and a photo, and we'll replace or refund it.
         </div>
       </div>
     </div>
